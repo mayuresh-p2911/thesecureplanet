@@ -3,6 +3,7 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+  initTickerLoop();
   initSearchModal();
   initCategoryFilter();
   initCommentTabs();
@@ -10,6 +11,16 @@ document.addEventListener('DOMContentLoaded', () => {
   initShareButtons();
   initMobileMenu();
 });
+
+/* ==========================================================================
+   TICKER — duplicate items so the -50% slide loops seamlessly
+   ========================================================================== */
+function initTickerLoop() {
+  const track = document.querySelector('.ticker-items');
+  if (!track || track.dataset.cloned) return;
+  track.innerHTML += track.innerHTML;
+  track.dataset.cloned = 'true';
+}
 
 /* ==========================================================================
    SEARCH MODAL
@@ -105,7 +116,7 @@ function initCategoryFilter() {
       articles.forEach((article) => {
         const category = article.getAttribute('data-category');
         if (filter === 'all' || category === filter) {
-          article.style.display = 'grid';
+          article.style.display = '';
           article.style.opacity = '0';
           setTimeout(() => {
             article.style.opacity = '1';
