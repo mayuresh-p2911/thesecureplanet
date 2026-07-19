@@ -10,7 +10,56 @@ document.addEventListener('DOMContentLoaded', () => {
   initRandomPost();
   initShareButtons();
   initMobileMenu();
+  initScrollReveal();
+  initNavbarShadow();
 });
+
+/* ==========================================================================
+   SCROLL REVEAL — staggered card entrances (no-JS safe: .reveal only
+   exists once this runs, and only when IntersectionObserver is supported)
+   ========================================================================== */
+function initScrollReveal() {
+  if (!('IntersectionObserver' in window)) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  const targets = document.querySelectorAll(
+    '.article-card, .side-feature-card, .sidebar-widget, .hero-main-card'
+  );
+  if (!targets.length) return;
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in-view');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+
+  let stagger = 0;
+  targets.forEach((el) => {
+    el.classList.add('reveal');
+    // small cascading delay per element, capped so late cards never lag
+    el.style.setProperty('--reveal-delay', `${Math.min(stagger, 0.3)}s`);
+    stagger += 0.06;
+    observer.observe(el);
+  });
+}
+
+/* ==========================================================================
+   NAVBAR — soft shadow once the page is scrolled
+   ========================================================================== */
+function initNavbarShadow() {
+  const navbar = document.querySelector('.navbar');
+  if (!navbar) return;
+
+  const update = () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 8);
+  };
+
+  window.addEventListener('scroll', update, { passive: true });
+  update();
+}
 
 /* ==========================================================================
    TICKER — duplicate items so the -50% slide loops seamlessly
@@ -162,10 +211,13 @@ function initCommentTabs() {
 function initRandomPost() {
   const randomBtns = document.querySelectorAll('.random-post-btn');
   const posts = [
-    'post.html',
-    'post.html#emulator',
-    'post.html#risk-factor',
-    'post.html#watcher'
+    'https://www.thesecureplanet.com/2023/09/a-free-retro-video-game-emulator.html',
+    'https://www.thesecureplanet.com/2023/09/amazing-website-find-if-your-property.html',
+    'https://www.thesecureplanet.com/2023/09/free-program-find-if-your-computer-is.html',
+    'https://www.thesecureplanet.com/2023/09/open-source-best-image-forensic-toolset.html',
+    'https://www.thesecureplanet.com/2023/09/monitor-ipv4-utilization-for-amazon-vpc.html',
+    'https://www.thesecureplanet.com/2023/09/free-program-reminds-you-on-taking.html',
+    'https://www.thesecureplanet.com/2023/08/job-data-protection-officer-dpo.html'
   ];
 
   randomBtns.forEach((btn) => {

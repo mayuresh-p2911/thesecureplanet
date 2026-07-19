@@ -41,12 +41,12 @@
   --border-coral: rgba(222, 74, 67, 0.28);
   --border-blue: rgba(37, 99, 235, 0.28);
 
-  /* Shadows — quiet, single light source */
+  /* Shadows — quiet, single light source, layered for depth */
   --shadow-xs: 0 1px 2px rgba(24, 24, 27, 0.05);
   --shadow-sm: 0 1px 3px rgba(24, 24, 27, 0.07), 0 1px 2px rgba(24, 24, 27, 0.04);
-  --shadow-md: 0 4px 12px -2px rgba(24, 24, 27, 0.1);
-  --shadow-lg: 0 16px 40px -12px rgba(24, 24, 27, 0.18);
-  --shadow-hover: 0 10px 28px -10px rgba(24, 24, 27, 0.16);
+  --shadow-md: 0 2px 4px rgba(24, 24, 27, 0.05), 0 4px 12px -2px rgba(24, 24, 27, 0.1);
+  --shadow-lg: 0 4px 8px rgba(24, 24, 27, 0.06), 0 16px 40px -12px rgba(24, 24, 27, 0.18);
+  --shadow-hover: 0 2px 6px rgba(24, 24, 27, 0.06), 0 12px 32px -10px rgba(24, 24, 27, 0.18);
 
   /* Type */
   --font-heading: 'Space Grotesk', -apple-system, sans-serif;
@@ -85,6 +85,9 @@ html {
 body {
   font-family: var(--font-body);
   background-color: var(--bg-root);
+  /* faint zinc dot grid — shows only in the gaps between white cards */
+  background-image: radial-gradient(rgba(24, 24, 27, 0.055) 1px, transparent 1px);
+  background-size: 22px 22px;
   color: var(--text-main);
   line-height: 1.6;
   overflow-x: hidden;
@@ -315,6 +318,11 @@ button { cursor: pointer; }
   -webkit-backdrop-filter: blur(12px);
   border-top: 1px solid var(--border-subtle);
   border-bottom: 1px solid var(--border-subtle);
+  transition: box-shadow var(--transition-normal);
+}
+
+.navbar.scrolled {
+  box-shadow: 0 8px 24px -12px rgba(24, 24, 27, 0.14);
 }
 
 .navbar-inner {
@@ -588,6 +596,7 @@ button { cursor: pointer; }
 .cat-badge.forensics { background: rgba(124, 58, 237, 0.07); color: #6D28D9; border: 1px solid rgba(124, 58, 237, 0.22); }
 .cat-badge.infosec   { background: rgba(5, 150, 105, 0.07); color: #047857; border: 1px solid rgba(5, 150, 105, 0.22); }
 .cat-badge.cybersec  { background: rgba(217, 119, 6, 0.08); color: #B45309; border: 1px solid rgba(217, 119, 6, 0.25); }
+.cat-badge.jobs      { background: rgba(13, 148, 136, 0.07); color: #0F766E; border: 1px solid rgba(13, 148, 136, 0.22); }
 
 /* Badges sitting on the dark hero photo need light treatment */
 .hero-content .cat-badge {
@@ -599,12 +608,13 @@ button { cursor: pointer; }
 
 .hero-title {
   font-family: var(--font-heading);
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 2.6vw, 2.15rem);
   font-weight: 700;
-  line-height: 1.22;
-  letter-spacing: -0.01em;
+  line-height: 1.2;
+  letter-spacing: -0.015em;
   margin-bottom: 10px;
   color: #fff;
+  text-wrap: balance;
 }
 
 .hero-title a:hover { color: #E4E4E7; }
@@ -794,6 +804,7 @@ button { cursor: pointer; }
 }
 
 .article-card {
+  position: relative;
   display: flex;
   flex-direction: column;
   background: var(--bg-card);
@@ -803,6 +814,24 @@ button { cursor: pointer; }
   box-shadow: var(--shadow-xs);
   transition: border-color var(--transition-fast), box-shadow var(--transition-normal), transform var(--transition-normal), opacity var(--transition-normal);
 }
+
+/* coral signal line sweeps across the top on hover */
+.article-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--brand-coral) 0%, rgba(222, 74, 67, 0.25) 70%, transparent 100%);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 5;
+  pointer-events: none;
+}
+
+.article-card:hover::after { transform: scaleX(1); }
 
 .article-card:first-child {
   grid-column: 1 / -1;
@@ -836,6 +865,44 @@ button { cursor: pointer; }
 }
 
 .article-card:hover .article-thumb img { transform: var(--img-crop-hover); }
+
+/* Posts without a featured image get a dark ink tile instead */
+.article-thumb.thumb-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background-color: var(--bg-ink);
+  background-image:
+    radial-gradient(circle at 30% 20%, rgba(125, 211, 252, 0.12), transparent 55%),
+    radial-gradient(rgba(250, 250, 250, 0.07) 1px, transparent 1px);
+  background-size: auto, 18px 18px;
+}
+
+.thumb-placeholder-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: var(--radius-md);
+  background: rgba(250, 250, 250, 0.06);
+  border: 1px solid rgba(250, 250, 250, 0.14);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  color: #7DD3FC;
+  transition: transform var(--transition-normal);
+}
+
+.article-card:hover .thumb-placeholder-icon { transform: translateY(-3px) scale(1.05); }
+
+.thumb-placeholder-label {
+  font-family: var(--font-mono);
+  font-size: 0.6563rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  color: #A1A1AA;
+}
 
 .article-info {
   display: flex;
@@ -998,6 +1065,10 @@ button { cursor: pointer; }
 .popular-item + .popular-item { border-top: 1px solid var(--bg-inset); }
 
 .popular-item:hover { background: var(--bg-inset); }
+
+.popular-item-number { transition: color var(--transition-fast); }
+
+.popular-item:hover .popular-item-number { color: var(--brand-coral); }
 
 .popular-item-number {
   font-family: var(--font-mono);
@@ -1227,7 +1298,8 @@ button { cursor: pointer; }
   display: inline-flex;
   align-items: center;
   gap: 9px;
-  background: var(--brand-coral);
+  background: linear-gradient(180deg, #E4574F, var(--brand-coral));
+  border: 1px solid var(--brand-coral-hover);
   color: #fff;
   font-weight: 600;
   font-size: 0.9063rem;
@@ -1238,7 +1310,7 @@ button { cursor: pointer; }
 }
 
 .btn-primary:hover {
-  background: var(--brand-coral-hover);
+  background: linear-gradient(180deg, #D4453E, var(--brand-coral-hover));
   color: #fff;
   transform: translateY(-1px);
   box-shadow: var(--shadow-md);
@@ -1349,11 +1421,36 @@ input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
 /* ==========================================================================
    FOOTER
    ========================================================================== */
+/* Dark ink footer — bookends the dark top bar. Vars are re-scoped so
+   existing rules and inline var() styles resolve to dark-surface values. */
 .site-footer {
-  background: var(--bg-surface);
-  border-top: 1px solid var(--border-subtle);
+  --text-main: #FAFAFA;
+  --text-secondary: #A1A1AA;
+  --text-muted: #71717A;
+  --border-subtle: #27272A;
+  --border-strong: #3F3F46;
+  --bg-root: #18181B;
+  --bg-surface: #18181B;
+  --bg-inset: #18181B;
+  background: var(--bg-ink);
+  border-top: 1px solid #27272A;
   padding: 56px 0 28px;
   margin-top: auto;
+  color: var(--text-secondary);
+}
+
+.site-footer .logo-emblem {
+  border-color: #3F3F46;
+}
+
+.site-footer .newsletter-input {
+  background: #18181B;
+  border-color: #3F3F46;
+}
+
+.site-footer .newsletter-input:focus {
+  border-color: #FAFAFA;
+  box-shadow: 0 0 0 3px rgba(250, 250, 250, 0.1);
 }
 
 .footer-grid {
@@ -1461,8 +1558,8 @@ input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
   border-radius: var(--radius-md);
   padding: 18px;
   box-shadow: var(--shadow-lg);
-  transform: translateY(-8px) scale(0.98);
-  transition: transform var(--transition-normal);
+  transform: translateY(-12px) scale(0.97);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .search-modal.open .search-modal-content {
@@ -1502,6 +1599,36 @@ input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
   color: var(--text-main);
   background: var(--bg-inset);
 }
+
+/* ==========================================================================
+   SCROLL REVEAL — .reveal is added by JS only when IO is supported,
+   so content is always visible without JS
+   ========================================================================== */
+@media (prefers-reduced-motion: no-preference) {
+  .reveal {
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    transition-delay: var(--reveal-delay, 0s);
+  }
+
+  .reveal.in-view {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* ==========================================================================
+   SCROLLBAR — zinc, quiet
+   ========================================================================== */
+::-webkit-scrollbar { width: 12px; height: 12px; }
+::-webkit-scrollbar-track { background: var(--bg-root); }
+::-webkit-scrollbar-thumb {
+  background: #D4D4D8;
+  border-radius: 8px;
+  border: 3px solid var(--bg-root);
+}
+::-webkit-scrollbar-thumb:hover { background: #A1A1AA; }
 
 /* ==========================================================================
    MOTION PREFERENCES
