@@ -10,8 +10,7 @@
   
   <!-- FontAwesome 4.7 for exact icon compatibility -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
-  <!-- Custom Modern Styling -->
-  <link rel="stylesheet" href="css/styles.css?v=2" />
+  <link rel="stylesheet" href="css/styles.css?v=7" />
 </head>
 <body>
 
@@ -162,85 +161,132 @@
     </div>
   </div>
 
-  <!-- HERO SPOTLIGHT SECTION -->
-  <section class="hero-section">
-    <div class="container hero-grid">
-      
-      <!-- Main Featured Card -->
-      <article class="hero-main-card">
-        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhvWwS2mNvKHmo2PHc1Tw5nOTHwQkQDmBKVFsgjzniRXVyqvV911niEBD67Qr1B_ttMeJwpaQz77orAPJg8nRWhuVauwJTPytWSDwo7agUqQcUwjq1DhcZRAO9rQTO0tJUSPB1DZqRsD1Ll_pCfzRwgBL88fffUf-3ttR7uOMKOYFIY893v-tb0US8z_afw/w640-h461/Emu.png" alt="OpenEmu Retro Video Game Emulator" class="hero-main-bg" />
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-          <span class="cat-badge tech-tips"><i class="fa fa-lightbulb-o"></i> Tech Tips</span>
-          <h2 class="hero-title">
-            <a href="post.html">A FREE Retro Video Game Emulator — OpenEmu for macOS</a>
-          </h2>
-          <p class="hero-summary">
-            OpenEmu brings macOS game emulation into the realm of first-class citizenship, leveraging modern Metal and Cocoa technologies with multi-engine modular support.
-          </p>
-          <div class="meta-row">
-            <div class="author-chip">
-              <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg33fLV-eMF__aAJ8TfolBbXg8p5lUk8cVnZ2fcl-wGIMurRrvKpJqrbbSFqGCFOSKOYSy17Nit5uk8Znu1X0bbzQmR91PJJYDWyQteHGZEF3c_1g9PJ5aq7QKFjf4qJBo/s114/TSP.jpg" alt="Author Avatar" />
-              <span>The Secure Planet</span>
-            </div>
-            <span>•</span>
-            <span>September 20, 2023</span>
-            <span>•</span>
-            <span><i class="fa fa-clock-o"></i> 4 min read</span>
+  <!-- FEATURED POSTS SECTION (matches original thesecureplanet.com hero widget) -->
+  <section class="featured-posts-section">
+    <div class="container featured-posts-wrapper">
+
+      <!-- Left: Large Featured Slider Card -->
+      <div class="fp-slider-wrap">
+        <!-- Slider Header Bar -->
+        <div class="fp-slider-header">
+          <div class="fp-slider-title-scroll">
+            <span class="fp-slider-title-text">JOB - Data Protection Officer (DPO) - Mahindra Group, India</span>
+          </div>
+          <div class="fp-slider-controls">
+            <button class="fp-ctrl-btn" id="fp-prev" aria-label="Previous"><i class="fa fa-caret-down"></i></button>
+            <button class="fp-ctrl-btn" id="fp-pause" aria-label="Pause"><i class="fa fa-pause"></i></button>
+            <button class="fp-ctrl-btn" id="fp-next" aria-label="Next"><i class="fa fa-caret-up"></i></button>
           </div>
         </div>
-      </article>
+        <!-- Slider Meta -->
+        <div class="fp-slider-meta">The Secure Planet • Aug 11 2023</div>
 
-      <!-- Side Featured Grid -->
-      <div class="hero-side-grid">
-        <article class="side-feature-card">
-          <a href="post.html" class="side-thumb">
-            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhEevf8c51ZKIDwKTZtNFtoMJqLwudvCMD-wGtk6ifqgYoNNPpAFJcbnMf52rzspNJluYWjf1Tr6fY3WIdsQVcykGWAT5CqY667rOyQoPehn0Dmd-_hNotYqLDaNYvTOHXPlUjw73ohWp9pH6te9wpy2hbBswThf95S1bl_2sgsGTy9Sp7LiOoYIct_P8Sy/w640-h377/Image%20Forensic.png" alt="Sherloq Image Forensics" />
-          </a>
-          <div class="side-info">
-            <span class="cat-badge forensics" style="margin-bottom:6px;"><i class="fa fa-search"></i> Digital Forensics</span>
-            <h3 class="side-title">
-              <a href="post.html">Open Source — Best Image Forensic Toolset (Sherloq)</a>
-            </h3>
-            <div class="meta-row" style="font-size:0.75rem;">
-              <span>Sept 20, 2023</span>
-            </div>
-          </div>
-        </article>
+        <!-- Slides -->
+        <div class="fp-slides-container" id="fp-slides">
 
-        <article class="side-feature-card">
-          <a href="post.html" class="side-thumb">
-            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhDD3Zvhk5KXNnV4uqRCmAPQ9qN_YCd0A8VvfRTv6dCREMfoiOq2FS_wR2TsFPf4wTTA18bs1ESNkzjEXarSS48lmT24OHBzuJdqz7CK7mpbtUCutsUFKTy7Wp0nrBigvfr9Dm4y_beQtUedPFEa9YVBsurT74ECKyDH2K48qTa3aHbN6-BciFPaOFMoKn2/w640-h152/Watcher.png" alt="Watcher Program" />
-          </a>
-          <div class="side-info">
-            <span class="cat-badge tech-tips" style="margin-bottom:6px;"><i class="fa fa-shield"></i> Tech Tips</span>
-            <h3 class="side-title">
-              <a href="post.html">Free Program — Find if Your Computer is Being Used by Someone</a>
-            </h3>
-            <div class="meta-row" style="font-size:0.75rem;">
-              <span>Sept 20, 2023</span>
-            </div>
+          <div class="fp-slide active">
+            <a href="post.html" class="fp-slide-link">
+              <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgLZwFiQkidh_U6ltudssqbNM9dyHpSk9fEYKQEvTan94FeKv-tPe48rdNueVjzTXDF-1HbCtJWg7y0MsXfLvA-aVjE_D1FNaFp-wZ1q_oO2BJOYt2akhyOTgM1CaduCnJETt4TGGl6iONh/s16000/Fuzzing.png" alt="Free - The Fuzzing Book" class="fp-slide-img" />
+              <div class="fp-slide-overlay"></div>
+              <div class="fp-slide-info">
+                <span class="fp-cat-badge fp-infosec">INFORMATION SECURITY</span>
+                <div class="fp-slide-meta-row">
+                  <i class="fa fa-user"></i> The Secure Planet &nbsp;•&nbsp; <i class="fa fa-clock-o"></i> Aug 11 2023
+                </div>
+              </div>
+            </a>
           </div>
-        </article>
 
-        <article class="side-feature-card">
-          <a href="post.html" class="side-thumb">
-            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg40aFbGvdWEY86Rq1B5oZ7ilikDZONH5y-ciKb4akKPr619P6raWf0-mi9nKV7lDvhrLW94DJxtUT-8WqBF-VauGIYynOOsSS7MhzH2DbEzSpVDQR57WqrF1m8z3P16E6Lt_gytMGAVYQygbr1YJ_a1BhXCVuqiVYMS71s9GAzJufi1Z0Y780weJp3vRye/s16000/Risk%20Factor.png" alt="Risk Factor Climate Risk" />
-          </a>
-          <div class="side-info">
-            <span class="cat-badge science" style="margin-bottom:6px;"><i class="fa fa-globe"></i> Science</span>
-            <h3 class="side-title">
-              <a href="post.html">Amazing Website — Find Property Risk of Climate Change</a>
-            </h3>
-            <div class="meta-row" style="font-size:0.75rem;">
-              <span>Sept 20, 2023</span>
-            </div>
+          <div class="fp-slide">
+            <a href="post.html" class="fp-slide-link">
+              <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEisNGrYQSs1rjvMxymCoZ1l0jLcAcB6g-QvULtSOUsx1M0DHGMbf5IhXnyiXLlBVrRml1klLCrKqnXzrxt-w_nRMuVbPHT_Ladxp4JVac6ZJcbhpTKc9f7HqCtx11kRpOyxUanSH--0NRy_ThGpwlGVnfwZ1LqV02CiYIK8XF1wPlw-0qPJ4529_5kNq6Hq/w640-h276/TH1.jpg" alt="Cyber Security Threat Hunting" class="fp-slide-img" />
+              <div class="fp-slide-overlay"></div>
+              <div class="fp-slide-info">
+                <span class="fp-cat-badge fp-cybersec">CYBER SECURITY</span>
+                <div class="fp-slide-meta-row">
+                  <i class="fa fa-user"></i> The Secure Planet &nbsp;•&nbsp; <i class="fa fa-clock-o"></i> Sept 20 2023
+                </div>
+              </div>
+            </a>
           </div>
-        </article>
+
+          <div class="fp-slide">
+            <a href="post.html" class="fp-slide-link">
+              <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgXdHTDLEbFUABXDBXgOnolYKFcmG7D2s3Umi_UsUNXLerC2jnC_noiTX3bb1PxDuWS5ycd0yyNmALw27e_0BiiStEakR2amHEkoVFqGkHjNfsy1aoDZnmvSHQqePuoW3LpTJbk2hJUcFSH/s16000/MS.png" alt="Audit Compliance Baselines" class="fp-slide-img" />
+              <div class="fp-slide-overlay"></div>
+              <div class="fp-slide-info">
+                <span class="fp-cat-badge fp-audit">AUDIT COMPLIANCE</span>
+                <div class="fp-slide-meta-row">
+                  <i class="fa fa-user"></i> The Secure Planet &nbsp;•&nbsp; <i class="fa fa-clock-o"></i> Aug 11 2023
+                </div>
+              </div>
+            </a>
+          </div>
+
+        </div>
+        <!-- Dots -->
+        <div class="fp-dots" id="fp-dots">
+          <span class="fp-dot" data-index="0"></span>
+          <span class="fp-dot" data-index="1"></span>
+          <span class="fp-dot" data-index="2"></span>
+          <span class="fp-dot active" data-index="3"></span>
+          <span class="fp-dot" data-index="4"></span>
+          <span class="fp-dot" data-index="5"></span>
+        </div>
       </div>
 
+      <!-- Right: 2x2 Grid of Featured Article Cards -->
+      <div class="fp-grid">
+
+        <a href="post.html" class="fp-card">
+          <div class="fp-card-img-wrap">
+            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEisNGrYQSs1rjvMxymCoZ1l0jLcAcB6g-QvULtSOUsx1M0DHGMbf5IhXnyiXLlBVrRml1klLCrKqnXzrxt-w_nRMuVbPHT_Ladxp4JVac6ZJcbhpTKc9f7HqCtx11kRpOyxUanSH--0NRy_ThGpwlGVnfwZ1LqV02CiYIK8XF1wPlw-0qPJ4529_5kNq6Hq/w640-h276/TH1.jpg" alt="Open Source Threat Hunting" />
+            <span class="fp-card-badge fp-cybersec">CYBER SECURITY</span>
+          </div>
+          <div class="fp-card-body">
+            <h4 class="fp-card-title">Open Source - First Response Tool For Threat Hunting</h4>
+            <div class="fp-card-meta"><i class="fa fa-clock-o"></i> Aug 11 2023 &nbsp;<i class="fa fa-user"></i> The Secure Planet</div>
+          </div>
+        </a>
+
+        <a href="post.html" class="fp-card">
+          <div class="fp-card-img-wrap">
+            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgXdHTDLEbFUABXDBXgOnolYKFcmG7D2s3Umi_UsUNXLerC2jnC_noiTX3bb1PxDuWS5ycd0yyNmALw27e_0BiiStEakR2amHEkoVFqGkHjNfsy1aoDZnmvSHQqePuoW3LpTJbk2hJUcFSH/s16000/MS.png" alt="Security Baselines" />
+            <span class="fp-card-badge fp-audit">AUDIT COMPLIANCE</span>
+          </div>
+          <div class="fp-card-body">
+            <h4 class="fp-card-title">FREE - Security Configuration Baselines For Microsoft Products</h4>
+            <div class="fp-card-meta"><i class="fa fa-clock-o"></i> Oct 17 2021 &nbsp;|&nbsp; <i class="fa fa-user"></i> The Secure Planet</div>
+          </div>
+        </a>
+
+        <a href="post.html" class="fp-card">
+          <div class="fp-card-img-wrap">
+            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgKQMP5tdTx-6XdpO64Vsl2dYFwshqDP-n7fF-wlrBQKpj_JulL1SBUXPokVdXTeOQVgj2-cDixaFpiCXicmtlCLyBH8mTag-2HNBb2sM3VxudCich3YVwvWSet-R-onFdHWyVy8_1-SsL-/s400/MICHELIN-X-TWEEL.jpg" alt="Puncture Less Tyre Tweel" />
+            <span class="fp-card-badge fp-entrepreneur">ENTREPRENEURSHIP</span>
+          </div>
+          <div class="fp-card-body">
+            <h4 class="fp-card-title">Here Comes Puncture-Less Tyre - Tweel</h4>
+            <div class="fp-card-meta"><i class="fa fa-clock-o"></i> Jan 20 2015 &nbsp;<i class="fa fa-user"></i> The Secure Planet</div>
+          </div>
+        </a>
+
+        <a href="post.html" class="fp-card">
+          <div class="fp-card-img-wrap">
+            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhvWwS2mNvKHmo2PHc1Tw5nOTHwQkQDmBKVFsgjzniRXVyqvV911niEBD67Qr1B_ttMeJwpaQz77orAPJg8nRWhuVauwJTPytWSDwo7agUqQcUwjq1DhcZRAO9rQTO0tJUSPB1DZqRsD1Ll_pCfzRwgBL88fffUf-3ttR7uOMKOYFIY893v-tb0US8z_afw/w640-h461/Emu.png" alt="Retro Video Game Emulator" />
+            <span class="fp-card-badge fp-techtips">TECH TIPS</span>
+          </div>
+          <div class="fp-card-body">
+            <h4 class="fp-card-title">A FREE Retro Video Game Emulator</h4>
+            <div class="fp-card-meta"><i class="fa fa-clock-o"></i> Sep 20 2023 &nbsp;|&nbsp; <i class="fa fa-user"></i> The Secure Planet</div>
+          </div>
+        </a>
+
+      </div>
     </div>
   </section>
+
+
 
   <!-- MAIN AREA (ARTICLES + SIDEBAR) -->
   <main class="main-content-area">

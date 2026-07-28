@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initRandomPost();
   initShareButtons();
   initMobileMenu();
+  initFeaturedSlider();
 });
 
 /* ==========================================================================
@@ -213,4 +214,68 @@ function initMobileMenu() {
       if (icon) icon.className = 'fa fa-bars';
     }
   });
+}
+
+/* ==========================================================================
+   FEATURED POSTS SLIDER
+   ========================================================================== */
+function initFeaturedSlider() {
+  const slides = document.querySelectorAll('.fp-slide');
+  const dots   = document.querySelectorAll('.fp-dot');
+  const prevBtn  = document.getElementById('fp-prev');
+  const nextBtn  = document.getElementById('fp-next');
+  const pauseBtn = document.getElementById('fp-pause');
+  const titleEl  = document.querySelector('.fp-slider-title-text');
+  const metaEl   = document.querySelector('.fp-slider-meta');
+
+  if (!slides.length) return;
+
+  const slideTitles = [
+    'JOB - Data Protection Officer (DPO) - Mahindra Group, India',
+    'Open Source - First response tool for threat hunting',
+    'FREE - Security Configuration Baselines For Microsoft Products'
+  ];
+
+  const slideMetas = [
+    'The Secure Planet • Aug 11 2023',
+    'The Secure Planet • Sep 20 2023',
+    'The Secure Planet • Aug 11 2023'
+  ];
+
+  let current = 0;
+  let paused = false;
+  let timer;
+
+  function goTo(index) {
+    slides[current].classList.remove('active');
+    dots[current] && dots[current].classList.remove('active');
+    current = (index + slides.length) % slides.length;
+    slides[current].classList.add('active');
+    dots[current] && dots[current].classList.add('active');
+    if (titleEl) titleEl.textContent = slideTitles[current];
+    if (metaEl)  metaEl.textContent  = slideMetas[current];
+  }
+
+  function startTimer() {
+    clearInterval(timer);
+    timer = setInterval(() => { if (!paused) goTo(current + 1); }, 4000);
+  }
+
+  if (prevBtn) prevBtn.addEventListener('click', () => { goTo(current - 1); startTimer(); });
+  if (nextBtn) nextBtn.addEventListener('click', () => { goTo(current + 1); startTimer(); });
+
+  if (pauseBtn) {
+    pauseBtn.addEventListener('click', () => {
+      paused = !paused;
+      pauseBtn.innerHTML = paused
+        ? '<i class="fa fa-play"></i>'
+        : '<i class="fa fa-pause"></i>';
+    });
+  }
+
+  dots.forEach((dot, i) => {
+    dot.addEventListener('click', () => { goTo(i); startTimer(); });
+  });
+
+  startTimer();
 }
