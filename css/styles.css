@@ -2141,3 +2141,83 @@ input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
   .side-thumb { width: 100%; height: 150px; }
   .social-grid { grid-template-columns: 1fr; }
 }
+
+/* ==========================================================================
+   BLOG PAGE PAGINATION (Matches original Blogger widget styling)
+   ========================================================================== */
+.blog-pagination {
+  margin-top: 36px;
+  padding: 14px 0;
+  border-top: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--border-subtle);
+  width: 100%;
+}
+
+.pagination-inner {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+}
+
+.page-count {
+  color: #64748B;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding-right: 14px;
+  border-right: 1px solid var(--border-subtle);
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+.page-count i {
+  color: #94A3B8;
+  font-size: 0.95rem;
+}
+
+.pagination-numbers {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.page-num {
+  color: #2563EB;
+  font-weight: 500;
+  padding: 2px 4px;
+  position: relative;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.page-num:hover {
+  color: #1D4ED8;
+}
+
+.page-num.active {
+  color: #0F172A;
+  font-weight: 700;
+  border-bottom: 2.5px solid #2563EB;
+}
+
+.page-ellipsis {
+  color: #94A3B8;
+  padding: 0 2px;
+}
+
+.page-nav {
+  color: #2563EB;
+  font-weight: 500;
+  padding: 2px 6px;
+  border-left: 1px solid var(--border-subtle);
+  margin-left: 4px;
+  transition: color var(--transition-fast);
+}
+
+.page-nav:hover {
+  color: #1D4ED8;
+}

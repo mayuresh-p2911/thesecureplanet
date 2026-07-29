@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initShareButtons();
   initMobileMenu();
   initFeaturedSlider();
+  initBlogPagination();
 });
 
 /* ==========================================================================
@@ -339,4 +340,61 @@ function initFeaturedSlider() {
   });
 
   startTimer();
+}
+
+/* ==========================================================================
+   BLOG PAGE PAGINATION (Interactive Page Switcher)
+   ========================================================================== */
+function initBlogPagination() {
+  const pageNums = document.querySelectorAll('.page-num');
+  const countEl  = document.getElementById('current-page-num');
+  const nextBtn  = document.getElementById('page-next');
+  const lastBtn  = document.getElementById('page-last');
+  const feedHeader = document.querySelector('.section-header');
+
+  if (!pageNums.length || !countEl) return;
+
+  let currentPage = 1;
+  const maxPages = 21;
+
+  function updatePage(page) {
+    if (page < 1 || page > maxPages) return;
+    currentPage = page;
+    countEl.textContent = currentPage;
+
+    pageNums.forEach(num => {
+      const pageVal = parseInt(num.dataset.page, 10);
+      if (pageVal === currentPage) {
+        num.classList.add('active');
+      } else {
+        num.classList.remove('active');
+      }
+    });
+
+    if (feedHeader) {
+      feedHeader.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+
+  pageNums.forEach(num => {
+    num.addEventListener('click', (e) => {
+      e.preventDefault();
+      const pageVal = parseInt(num.dataset.page, 10);
+      if (!isNaN(pageVal)) updatePage(pageVal);
+    });
+  });
+
+  if (nextBtn) {
+    nextBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      updatePage(currentPage + 1);
+    });
+  }
+
+  if (lastBtn) {
+    lastBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      updatePage(maxPages);
+    });
+  }
 }

@@ -10,7 +10,7 @@
 
   <!-- FontAwesome 4.7 for exact icon compatibility -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
-  <link rel="stylesheet" href="css/styles.css?v=10" />
+  <link rel="stylesheet" href="css/styles.css?v=11" />
 </head>
 <body>
 
@@ -528,6 +528,27 @@
           </article>
 
         </div>
+
+        <!-- BLOG PAGE PAGINATION WIDGET (Matches original Blogger pagination) -->
+        <nav class="blog-pagination" aria-label="Blog Page Navigation">
+          <div class="pagination-inner">
+            <span class="page-count"><i class="fa fa-file-text-o"></i> Page <span id="current-page-num">1</span> of 21</span>
+            <div class="pagination-numbers" id="pagination-list">
+              <a href="javascript:void(0)" class="page-num active" data-page="1">1</a>
+              <a href="javascript:void(0)" class="page-num" data-page="2">2</a>
+              <a href="javascript:void(0)" class="page-num" data-page="3">3</a>
+              <a href="javascript:void(0)" class="page-num" data-page="4">4</a>
+              <a href="javascript:void(0)" class="page-num" data-page="5">5</a>
+              <a href="javascript:void(0)" class="page-num" data-page="6">6</a>
+              <a href="javascript:void(0)" class="page-num" data-page="7">7</a>
+              <span class="page-ellipsis">...</span>
+              <a href="javascript:void(0)" class="page-num" data-page="21">21</a>
+              <a href="javascript:void(0)" class="page-nav next-page" id="page-next">Next »</a>
+              <a href="javascript:void(0)" class="page-nav last-page" id="page-last">Last</a>
+            </div>
+          </div>
+        </nav>
+
       </section>
 
       <!-- RIGHT MINIMALISTIC SIDEBAR -->
