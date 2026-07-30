@@ -216,60 +216,17 @@ button { cursor: pointer; }
 .logo-component {
   display: flex;
   align-items: center;
-  gap: 14px;
-}
-
-.logo-emblem {
-  position: relative;
-  width: 46px;
-  height: 46px;
-  border-radius: var(--radius-md);
-  background: linear-gradient(145deg, #1E293B, #09090B);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #7DD3FC;
-  font-size: 1.35rem;
-  border: 1px solid #27272A;
-  box-shadow: var(--shadow-sm);
-}
-
-.logo-typography {
-  display: flex;
-  flex-direction: column;
-}
-
-.logo-title-row {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.logo-wing-line {
-  width: 20px;
-  height: 2px;
-  background: var(--border-strong);
-  border-radius: 2px;
-}
-
-.logo-title {
-  font-family: var(--font-heading);
-  font-size: 1.5rem;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  line-height: 1.1;
   color: var(--text-main);
-  text-transform: uppercase;
 }
 
-.logo-title .coral { color: var(--brand-coral); }
+.site-logo-img {
+  height: 44px;
+  width: auto;
+  display: block;
+}
 
-.logo-underline {
-  height: 2px;
-  background: var(--border-strong);
-  border-radius: 2px;
-  margin-top: 5px;
-  width: 100%;
+.site-logo-img--footer {
+  height: 34px;
 }
 
 /* Search trigger — command-palette style */
@@ -1434,10 +1391,6 @@ input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
   color: var(--text-secondary);
 }
 
-.site-footer .logo-emblem {
-  border-color: #3F3F46;
-}
-
 .site-footer .newsletter-input {
   background: #18181B;
   border-color: #3F3F46;
@@ -1689,12 +1642,7 @@ input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
     gap: 14px;
     width: 100%;
   }
-  .logo-component { flex-direction: column; gap: 10px; }
-  .logo-emblem { width: 42px; height: 42px; font-size: 1.2rem; }
-  .logo-title-row { justify-content: center; gap: 8px; }
-  .logo-title { font-size: 1.2rem; letter-spacing: 0.04em; }
-  .logo-wing-line { width: 14px; }
-  .logo-underline { max-width: 240px; margin: 4px auto 0; }
+  .site-logo-img { height: 36px; }
   .header-search-btn {
     width: 100%;
     min-width: 0;
@@ -2133,8 +2081,7 @@ input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
    RESPONSIVE: NARROW PHONES (<= 480px)
    ========================================================================== */
 @media (max-width: 480px) {
-  .logo-title { font-size: 1.05rem; }
-  .logo-wing-line { display: none; }
+  .site-logo-img { height: 30px; }
   .hero-title { font-size: 1.32rem; }
   .meta-row { flex-wrap: wrap; gap: 8px; }
   .side-feature-card { flex-direction: column; align-items: stretch; }

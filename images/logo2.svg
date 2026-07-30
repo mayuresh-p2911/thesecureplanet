@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 110" width="100%" height="100%">
+  <defs>
+    <linearGradient id="globeGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8" />
+      <stop offset="50%" stop-color="#0EA5E9" />
+      <stop offset="100%" stop-color="#0284C7" />
+    </linearGradient>
+    <radialGradient id="globeGlow2" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="rgba(56, 189, 248, 0.45)" />
+      <stop offset="100%" stop-color="rgba(2, 132, 199, 0)" />
+    </radialGradient>
+  </defs>
+
+  <!-- Left Horizontal Bar -->
+  <rect x="15" y="38" width="115" height="4.5" rx="2" fill="#FAFAFA" opacity="0.85" />
+
+  <!-- Right Horizontal Bar -->
+  <rect x="290" y="38" width="115" height="4.5" rx="2" fill="#FAFAFA" opacity="0.85" />
+
+  <!-- Center Globe Glow -->
+  <circle cx="210" cy="40" r="38" fill="url(#globeGlow2)" />
+
+  <!-- Center Globe -->
+  <circle cx="210" cy="40" r="28" fill="url(#globeGrad2)" />
+
+  <!-- Globe Network & Continents stylized lines -->
+  <ellipse cx="210" cy="40" rx="28" ry="11" fill="none" stroke="rgba(255,255,255,0.45)" stroke-width="1.2" />
+  <ellipse cx="210" cy="40" rx="14" ry="28" fill="none" stroke="rgba(255,255,255,0.45)" stroke-width="1.2" />
+  <path d="M 188 32 Q 210 26 232 32" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="1.5" />
+  <path d="M 190 48 Q 210 54 230 48" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="1.5" />
+  <circle cx="203" cy="33" r="2.2" fill="#FFFFFF" />
+  <circle cx="220" cy="37" r="1.8" fill="#FFFFFF" />
+  <circle cx="212" cy="47" r="2" fill="#FFFFFF" />
+  <circle cx="197" cy="44" r="1.5" fill="#FFFFFF" />
+
+  <!-- Brand Typography -->
+  <g font-family="'Outfit', 'Inter', sans-serif" font-weight="800" font-size="28" letter-spacing="2.5">
+    <text x="38" y="90" fill="#E05C56">THE</text>
+    <text x="115" y="90" fill="#FAFAFA">SECURE PLANET</text>
+  </g>
+
+  <!-- Bottom Accent Underline -->
+  <rect x="25" y="100" width="370" height="3.5" rx="1.5" fill="#FAFAFA" opacity="0.85" />
+</svg>
