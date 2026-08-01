@@ -1070,81 +1070,88 @@ button { cursor: pointer; }
   color: #FFF;
 }
 
-/* Popular Articles — THN & GBHackers Styled Rank List */
+/* Popular Articles — THN & GBHackers Clean Ranking Design */
 .popular-list {
   display: flex;
   flex-direction: column;
+  gap: 2px;
 }
 
 .popular-item {
   display: flex;
-  gap: 12px;
-  align-items: center;
-  padding: 11px 4px;
-  border-radius: var(--radius-sm);
-  transition: all 0.2s ease;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 12px 10px;
+  border-radius: var(--radius-md);
+  transition: all 0.22s cubic-bezier(0.4, 0, 0.2, 1);
+  text-decoration: none;
+  border-bottom: 1px solid var(--border-subtle);
 }
 
-.popular-item + .popular-item {
-  border-top: 1px dashed var(--border-subtle);
+.popular-item:last-child {
+  border-bottom: none;
 }
 
 .popular-item:hover {
   background: var(--bg-inset);
   transform: translateX(4px);
-  padding-left: 8px;
 }
 
-.popular-item-number {
+.popular-rank {
   font-family: var(--font-heading);
-  font-size: 0.82rem;
+  font-size: 0.88rem;
   font-weight: 800;
-  color: var(--text-muted);
-  width: 22px;
-  height: 22px;
-  border-radius: 6px;
+  color: var(--brand-coral);
+  background: rgba(222, 74, 67, 0.08);
+  border: 1px solid rgba(222, 74, 67, 0.2);
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-sm);
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--bg-inset);
   flex-shrink: 0;
-  transition: all 0.2s ease;
+  margin-top: 2px;
+  transition: all 0.22s ease;
 }
 
-.popular-item:hover .popular-item-number {
+.popular-item:hover .popular-rank {
   background: var(--brand-coral);
-  color: #FFF;
+  color: #FFFFFF;
+  border-color: var(--brand-coral);
 }
 
-.popular-thumb {
-  width: 68px;
-  height: 46px;
-  border-radius: var(--radius-sm);
-  overflow: hidden;
-  flex-shrink: 0;
-  border: 1px solid var(--border-subtle);
-  background: #F8FAFC;
-}
-
-.popular-thumb img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  object-position: center;
-  padding: 2px;
-  display: block;
+.popular-info {
+  flex: 1;
+  min-width: 0;
 }
 
 .popular-title {
-  font-size: 0.835rem;
+  font-family: var(--font-heading);
+  font-size: 0.875rem;
   font-weight: 600;
   line-height: 1.38;
   color: var(--text-main);
+  margin-bottom: 4px;
   transition: color var(--transition-fast);
 }
 
 .popular-item:hover .popular-title {
   color: var(--brand-blue);
+}
+
+.popular-meta {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.popular-meta i {
+  font-size: 0.72rem;
+  color: var(--text-muted);
 }
 
 /* Categories cloud */
