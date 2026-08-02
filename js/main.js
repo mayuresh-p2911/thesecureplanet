@@ -12,6 +12,9 @@ document.addEventListener('DOMContentLoaded', () => {
   initMobileMenu();
   initFeaturedSlider();
   initBlogPagination();
+  initDarkMode();
+  initHeroRotator();
+  initLoadMoreArticles();
 });
 
 /* ==========================================================================
@@ -112,16 +115,16 @@ function initSearchModal() {
   if (searchInput && resultsContainer) {
     searchInput.addEventListener('input', (e) => {
       const query = e.target.value.toLowerCase().trim();
-      const articles = document.querySelectorAll('.article-card');
+      const articles = document.querySelectorAll('.article-card, .hp-article-row');
       resultsContainer.innerHTML = '';
       
       if (query.length === 0) return;
 
       let count = 0;
       articles.forEach((article) => {
-        const title = article.querySelector('.article-title')?.textContent || '';
-        const excerpt = article.querySelector('.article-excerpt')?.textContent || '';
-        const link = article.querySelector('.article-title a')?.getAttribute('href') || '#';
+        const title = article.querySelector('.article-title, .hp-article-title')?.textContent || '';
+        const excerpt = article.querySelector('.article-excerpt, .hp-article-excerpt')?.textContent || '';
+        const link = article.querySelector('.article-title a, .hp-article-title a')?.getAttribute('href') || '#';
         
         if (title.toLowerCase().includes(query) || excerpt.toLowerCase().includes(query)) {
           count++;
@@ -340,6 +343,124 @@ function initFeaturedSlider() {
   });
 
   startTimer();
+}
+
+/* ==========================================================================
+   DARK MODE TOGGLE (homepage header) — persists via localStorage
+   ========================================================================== */
+function initDarkMode() {
+  const toggle = document.getElementById('dark-mode-toggle');
+  if (!toggle) return;
+
+  const icon = toggle.querySelector('i');
+  const root = document.documentElement;
+
+  const applyTheme = (theme) => {
+    if (theme === 'dark') {
+      root.setAttribute('data-theme', 'dark');
+      if (icon) icon.className = 'fa fa-sun-o';
+    } else {
+      root.removeAttribute('data-theme');
+      if (icon) icon.className = 'fa fa-moon-o';
+    }
+  };
+
+  applyTheme(localStorage.getItem('tsp-theme') || 'light');
+
+  toggle.addEventListener('click', () => {
+    const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    localStorage.setItem('tsp-theme', next);
+    applyTheme(next);
+  });
+}
+
+/* ==========================================================================
+   HOMEPAGE HERO ROTATOR (featured card cycles between 3 posts)
+   ========================================================================== */
+function initHeroRotator() {
+  const card = document.getElementById('hp-hero-card');
+  const dots = document.querySelectorAll('.hp-hero-dot');
+  if (!card || !dots.length) return;
+
+  const badgeEl   = document.getElementById('hp-hero-badge');
+  const titleEl   = document.getElementById('hp-hero-title');
+  const excerptEl = document.getElementById('hp-hero-excerpt');
+  const ctaEl     = document.getElementById('hp-hero-cta');
+
+  const slides = [
+    {
+      catClass: 'forensics',
+      catBg: 'rgba(124,58,237,0.35)', catBorder: 'rgba(124,58,237,0.5)',
+      cat: 'Digital Forensics',
+      title: 'Open Source — Best Image Forensic Toolset',
+      excerpt: 'Forensic Image Analysis is the application of image science and domain expertise to interpret the content of an image, or the image itself, in legal matters — Sherloq brings the full toolset, open source.',
+      url: 'https://www.thesecureplanet.com/2023/09/open-source-best-image-forensic-toolset.html'
+    },
+    {
+      catClass: 'tech-tips',
+      catBg: 'rgba(224,92,86,0.35)', catBorder: 'rgba(224,92,86,0.5)',
+      cat: 'Tech Tips',
+      title: 'Free Program — Find If Your Computer Is Being Used',
+      excerpt: 'After starting the application the cursor is moved to zero coordinates — if it moves, the camera takes a photo and a screenshot is captured, revealing who touched your machine.',
+      url: 'https://www.thesecureplanet.com/2023/09/free-program-find-if-your-computer-is.html'
+    },
+    {
+      catClass: 'infosec',
+      catBg: 'rgba(16,185,129,0.35)', catBorder: 'rgba(16,185,129,0.5)',
+      cat: 'Information Security',
+      title: 'Monitor IPv4 Utilization For Amazon VPC Subnets',
+      excerpt: 'Deploy a Lambda function that monitors IPv4 utilization for Amazon VPC Subnets and publishes the metrics to CloudWatch as custom IPUsage metrics.',
+      url: 'https://www.thesecureplanet.com/2023/09/monitor-ipv4-utilization-for-amazon-vpc.html'
+    }
+  ];
+
+  let current = 0;
+  let timer;
+
+  function render(index) {
+    const s = slides[index];
+    if (badgeEl) {
+      badgeEl.className = `cat-badge ${s.catClass}`;
+      badgeEl.style.color = '#fff';
+      badgeEl.style.background = s.catBg;
+      badgeEl.style.borderColor = s.catBorder;
+      badgeEl.textContent = s.cat;
+    }
+    if (titleEl) { titleEl.textContent = s.title; titleEl.href = s.url; }
+    if (excerptEl) excerptEl.textContent = s.excerpt;
+    if (ctaEl) ctaEl.href = s.url;
+    dots.forEach((d, i) => d.classList.toggle('active', i === index));
+  }
+
+  function goTo(index) {
+    current = (index + slides.length) % slides.length;
+    render(current);
+  }
+
+  function startTimer() {
+    clearInterval(timer);
+    timer = setInterval(() => goTo(current + 1), 6000);
+  }
+
+  dots.forEach((dot, i) => {
+    dot.addEventListener('click', () => { goTo(i); startTimer(); });
+  });
+
+  startTimer();
+}
+
+/* ==========================================================================
+   LOAD MORE ARTICLES (homepage feed)
+   ========================================================================== */
+function initLoadMoreArticles() {
+  const btn = document.getElementById('hp-load-more');
+  if (!btn) return;
+
+  btn.addEventListener('click', () => {
+    const hidden = document.querySelectorAll('#hp-articles-list [data-hidden="true"]');
+    hidden.forEach((row) => row.removeAttribute('data-hidden'));
+    btn.style.display = 'none';
+  });
 }
 
 /* ==========================================================================

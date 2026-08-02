@@ -10,130 +10,74 @@
 
   <!-- FontAwesome 4.7 for exact icon compatibility -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
-  <link rel="stylesheet" href="css/styles.css?v=12" />
+  <link rel="stylesheet" href="css/styles.css?v=16" />
 </head>
 <body>
 
-  <!-- TOP BAR -->
-  <div class="top-bar">
-    <div class="container top-bar-inner">
-      <div class="top-social-list">
-        <a href="https://www.twitter.com/TheSecurePlanet" target="_blank" title="Twitter">
-          <i class="fa fa-twitter"></i> @TheSecurePlanet
-        </a>
-        <a href="https://goo.gl/t3DX3D" target="_blank" title="YouTube Channel">
-          <i class="fa fa-youtube-play"></i> YouTube
-        </a>
-        <a href="https://www.linkedin.com/in/prakashp" target="_blank" title="LinkedIn">
-          <i class="fa fa-linkedin-square"></i> LinkedIn
-        </a>
-        <a href="https://feeds.feedburner.com/TheSecurePlanet" target="_blank" title="RSS Feeds">
-          <i class="fa fa-rss"></i> RSS
-        </a>
-      </div>
-      <div class="top-actions">
-        <div class="live-status">
-          <span class="live-dot"></span>
-          <span>LIVE INTEL FEED</span>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- SITE HEADER -->
-  <header class="site-header">
-    <div class="container header-branding">
+  <!-- UNIFIED HEADER (logo + nav + search + dark mode + subscribe) -->
+  <header class="hp-header">
+    <div class="container hp-header-inner">
       <a href="index.html" class="logo-component">
         <img src="images/logo.svg" alt="The Secure Planet" class="site-logo-img">
       </a>
-      <button class="header-search-btn" id="search-trigger">
-        <i class="fa fa-search"></i>
-        <span>Search Articles & Guides...</span>
-        <span class="search-shortcut">⌘K</span>
-      </button>
-    </div>
-  </header>
 
-  <!-- GLASSMORPHIC STICKY NAVBAR -->
-  <nav class="navbar">
-    <div class="container navbar-inner">
-      <ul class="nav-links">
-        <li class="nav-item active">
-          <a href="index.html" class="nav-link active-home">
-            <i class="fa fa-home"></i> Home
-          </a>
-        </li>
-        <li class="nav-item">
-          <a href="about.html" class="nav-link">About</a>
-        </li>
-        <li class="nav-item">
-          <a href="privacy-policy.html" class="nav-link">Privacy Policy</a>
-        </li>
-        <li class="nav-item">
-          <a href="dmca.html" class="nav-link">DMCA</a>
-        </li>
+      <nav class="hp-nav">
+        <ul class="nav-links">
+          <li class="nav-item active"><a href="index.html" class="nav-link">News</a></li>
+          <li class="nav-item">
+            <a href="https://www.thesecureplanet.com/search/label/Digital%20Forensics" class="nav-link">Exploits</a>
+          </li>
+          <li class="nav-item">
+            <a href="https://www.thesecureplanet.com/search/label/Information%20Security" class="nav-link">Vulnerabilities</a>
+          </li>
+          <li class="nav-item">
+            <a href="https://www.thesecureplanet.com/search/label/Cyber%20Security" class="nav-link">Malware</a>
+          </li>
+          <li class="nav-item">
+            <a href="https://www.thesecureplanet.com/search/label/Tech%20Tips" class="nav-link">Webinars</a>
+          </li>
+          <li class="nav-item">
+            <a href="https://www.thesecureplanet.com/search/label/Audit%20Compliance" class="nav-link">Tools</a>
+          </li>
+          <li class="nav-item">
+            <a href="https://www.thesecureplanet.com/search/label/General" class="nav-link">Writeups</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">More <i class="fa fa-angle-down"></i></a>
+            <div class="dropdown-menu">
+              <a href="about.html" class="dropdown-link"><i class="fa fa-info-circle"></i> About Us</a>
+              <a href="https://www.thesecureplanet.com/search/label/Jobs" class="dropdown-link"><i class="fa fa-briefcase"></i> Jobs</a>
+              <a href="privacy-policy.html" class="dropdown-link"><i class="fa fa-lock"></i> Privacy Policy</a>
+              <a href="dmca.html" class="dropdown-link"><i class="fa fa-gavel"></i> DMCA</a>
+              <a href="contact.html" class="dropdown-link"><i class="fa fa-envelope"></i> Contact</a>
+            </div>
+          </li>
+        </ul>
+      </nav>
 
-        <!-- Categories Dropdown (live Blogger labels) -->
-        <li class="nav-item">
-          <a href="#" class="nav-link">
-            Categories <i class="fa fa-angle-down"></i>
-          </a>
-          <div class="dropdown-menu">
-            <a href="https://www.thesecureplanet.com/search/label/Information%20Security" class="dropdown-link"><i class="fa fa-shield"></i> Information Security</a>
-            <a href="https://www.thesecureplanet.com/search/label/Audit%20Compliance" class="dropdown-link"><i class="fa fa-check-square-o"></i> Audit Compliance</a>
-            <a href="https://www.thesecureplanet.com/search/label/Cyber%20Security" class="dropdown-link"><i class="fa fa-lock"></i> Cyber Security</a>
-            <a href="https://www.thesecureplanet.com/search/label/Digital%20Forensics" class="dropdown-link"><i class="fa fa-search-plus"></i> Digital Forensics</a>
-            <a href="https://www.thesecureplanet.com/search/label/Tech%20Tips" class="dropdown-link"><i class="fa fa-lightbulb-o"></i> Tech Tips</a>
-            <a href="https://www.thesecureplanet.com/search/label/Entrepreneurship" class="dropdown-link"><i class="fa fa-rocket"></i> Entrepreneurship</a>
-            <a href="https://www.thesecureplanet.com/search/label/General" class="dropdown-link"><i class="fa fa-folder-open-o"></i> General</a>
-            <a href="https://www.thesecureplanet.com/search/label/Jobs" class="dropdown-link"><i class="fa fa-briefcase"></i> Jobs</a>
-          </div>
-        </li>
-
-        <!-- The Secure Planet Special Menu -->
-        <li class="nav-item">
-          <a href="#" class="nav-link">
-            Topics <i class="fa fa-angle-down"></i>
-          </a>
-          <div class="dropdown-menu">
-            <a href="https://www.thesecureplanet.com/search/label/Science" class="dropdown-link"><i class="fa fa-flask"></i> Science</a>
-            <a href="https://www.thesecureplanet.com/search?q=AWS" class="dropdown-link"><i class="fa fa-server"></i> Cloud & AWS Security</a>
-            <a href="https://www.thesecureplanet.com/search?q=ISO" class="dropdown-link"><i class="fa fa-book"></i> ISO Standards</a>
-            <a href="https://www.thesecureplanet.com/search?q=training" class="dropdown-link"><i class="fa fa-graduation-cap"></i> Corporate Training</a>
-          </div>
-        </li>
-
-        <li class="nav-item">
-          <a href="https://www.thesecureplanet.com/search/label/Jobs" class="nav-link">Jobs</a>
-        </li>
-        <li class="nav-item">
-          <a href="contact.html" class="nav-link">Contact</a>
-        </li>
-      </ul>
-
-      <div class="nav-tools">
-        <a href="#" class="random-post-btn">
-          <i class="fa fa-random"></i> Random Article
-        </a>
+      <div class="hp-header-actions">
+        <button class="hp-icon-btn" id="search-trigger" aria-label="Search">
+          <i class="fa fa-search"></i>
+        </button>
+        <button class="hp-icon-btn" id="dark-mode-toggle" aria-label="Toggle dark mode">
+          <i class="fa fa-moon-o"></i>
+        </button>
+        <a href="#hp-newsletter" class="hp-subscribe-btn"><span>Subscribe</span></a>
         <button class="mobile-nav-toggle" aria-label="Toggle Menu">
           <i class="fa fa-bars"></i>
         </button>
       </div>
     </div>
-  </nav>
+  </header>
 
-  <!-- LIVE BREAKING NEWS TICKER -->
+  <!-- TRENDING TICKER -->
   <div class="news-ticker-bar">
     <div class="container ticker-wrapper">
-      <div class="ticker-badge">
-        <i class="fa fa-bolt"></i> TRENDING
+      <div class="ticker-badge hp-ticker-badge">
+        <i class="fa fa-bolt"></i> TRENDING NOW
       </div>
       <div class="ticker-content">
         <div class="ticker-items">
-          <div class="ticker-item">
-            <span>•</span>
-            <a href="https://www.thesecureplanet.com/2023/09/a-free-retro-video-game-emulator.html">A FREE Retro Video Game Emulator — OpenEmu released for macOS</a>
-          </div>
           <div class="ticker-item">
             <span>•</span>
             <a href="https://www.thesecureplanet.com/2023/09/open-source-best-image-forensic-toolset.html">Sherloq: Best Open Source Image Forensic toolset with Qt-based GUI</a>
@@ -144,10 +88,6 @@
           </div>
           <div class="ticker-item">
             <span>•</span>
-            <a href="https://www.thesecureplanet.com/2021/10/india-government-releases-guideline-for.html">India — Government releases guideline for Cyber Security in the Power Sector</a>
-          </div>
-          <div class="ticker-item">
-            <span>•</span>
             <a href="https://www.thesecureplanet.com/2023/08/job-data-protection-officer-dpo.html">JOB — Data Protection Officer (DPO) at Mahindra Group, India</a>
           </div>
         </div>
@@ -155,13 +95,12 @@
     </div>
   </div>
 
-  <!-- FEATURED POSTS SECTION (matches original thesecureplanet.com hero widget) -->
+  <!-- FEATURED POSTS SLIDER + 2x2 GRID (matches original thesecureplanet.com widget) -->
   <section class="featured-posts-section">
     <div class="container featured-posts-wrapper">
 
       <!-- Left: Large Featured Slider Card -->
       <div class="fp-slider-wrap">
-        <!-- Slider Header Bar -->
         <div class="fp-slider-header">
           <div class="fp-slider-title-scroll">
             <span class="fp-slider-title-text">JOB - Data Protection Officer (DPO) - Mahindra Group, India</span>
@@ -172,10 +111,8 @@
             <button class="fp-ctrl-btn" id="fp-next" aria-label="Next"><i class="fa fa-caret-up"></i></button>
           </div>
         </div>
-        <!-- Slider Meta -->
         <div class="fp-slider-meta">The Secure Planet • Aug 11 2023</div>
 
-        <!-- Slides -->
         <div class="fp-slides-container" id="fp-slides">
 
           <div class="fp-slide active">
@@ -218,7 +155,6 @@
           </div>
 
         </div>
-        <!-- Dots -->
         <div class="fp-dots" id="fp-dots">
           <span class="fp-dot" data-index="0"></span>
           <span class="fp-dot" data-index="1"></span>
@@ -280,246 +216,176 @@
     </div>
   </section>
 
+  <!-- CATEGORY STRIP -->
+  <section class="container" style="margin-top: 8px;">
+    <div class="hp-cat-strip">
+      <a href="https://www.thesecureplanet.com/search/label/Information%20Security" class="hp-cat-item">
+        <span class="hp-cat-icon"><i class="fa fa-shield"></i></span>
+        <span>
+          <span class="hp-cat-label">Information Security</span>
+          <div class="hp-cat-desc">Policy & risk</div>
+        </span>
+      </a>
+      <a href="https://www.thesecureplanet.com/search/label/Audit%20Compliance" class="hp-cat-item">
+        <span class="hp-cat-icon"><i class="fa fa-check-square-o"></i></span>
+        <span>
+          <span class="hp-cat-label">Audit Compliance</span>
+          <div class="hp-cat-desc">ISO & standards</div>
+        </span>
+      </a>
+      <a href="https://www.thesecureplanet.com/search/label/Cyber%20Security" class="hp-cat-item">
+        <span class="hp-cat-icon"><i class="fa fa-lock"></i></span>
+        <span>
+          <span class="hp-cat-label">Cyber Security</span>
+          <div class="hp-cat-desc">Threats & defense</div>
+        </span>
+      </a>
+      <a href="https://www.thesecureplanet.com/search/label/Digital%20Forensics" class="hp-cat-item">
+        <span class="hp-cat-icon"><i class="fa fa-search-plus"></i></span>
+        <span>
+          <span class="hp-cat-label">Digital Forensics</span>
+          <div class="hp-cat-desc">Investigation tools</div>
+        </span>
+      </a>
+      <a href="https://www.thesecureplanet.com/search/label/Tech%20Tips" class="hp-cat-item">
+        <span class="hp-cat-icon"><i class="fa fa-lightbulb-o"></i></span>
+        <span>
+          <span class="hp-cat-label">Tech Tips</span>
+          <div class="hp-cat-desc">Guides & how-tos</div>
+        </span>
+      </a>
+      <a href="https://www.thesecureplanet.com/search/label/Jobs" class="hp-cat-item">
+        <span class="hp-cat-icon"><i class="fa fa-briefcase"></i></span>
+        <span>
+          <span class="hp-cat-label">Jobs</span>
+          <div class="hp-cat-desc">Security careers</div>
+        </span>
+      </a>
+    </div>
+  </section>
 
-
-  <!-- MAIN AREA (ARTICLES + SIDEBAR) -->
+  <!-- MAIN: latest articles + sidebar -->
   <main class="main-content-area">
-    <div class="container layout-grid">
+    <div class="container hp-main-grid" id="hp-articles">
 
-      <!-- LEFT MAIN CONTENT -->
-      <section class="main-feed">
-        <div class="section-header">
-          <h2 class="section-heading">
-            <i class="fa fa-tachometer"></i> LATEST INTEL & ARTICLES
-          </h2>
-
-          <!-- Category Filter Pills -->
-          <div class="filter-tabs">
-            <button class="filter-pill active" data-filter="all">All</button>
-            <button class="filter-pill" data-filter="Tech Tips">Tech Tips</button>
-            <button class="filter-pill" data-filter="Digital Forensics">Digital Forensics</button>
-            <button class="filter-pill" data-filter="Information Security">Information Security</button>
-            <button class="filter-pill" data-filter="Science">Science</button>
-            <button class="filter-pill" data-filter="Jobs">Jobs</button>
-          </div>
+      <section>
+        <div class="hp-feed-header">
+          <h2 class="hp-feed-heading"><i class="fa fa-rss" style="color:var(--hp-green);"></i> Latest Articles</h2>
+          <a href="#" class="hp-view-all">View All Articles <i class="fa fa-arrow-right"></i></a>
         </div>
 
-        <div class="articles-feed">
+        <div class="hp-articles-list" id="hp-articles-list">
 
-          <!-- Card 1 — OpenEmu -->
-          <article class="article-card" data-category="Tech Tips">
-            <a href="https://www.thesecureplanet.com/2023/09/a-free-retro-video-game-emulator.html" class="article-thumb">
+          <article class="hp-article-row">
+            <a href="https://www.thesecureplanet.com/2023/09/a-free-retro-video-game-emulator.html" class="hp-article-thumb">
               <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhvWwS2mNvKHmo2PHc1Tw5nOTHwQkQDmBKVFsgjzniRXVyqvV911niEBD67Qr1B_ttMeJwpaQz77orAPJg8nRWhuVauwJTPytWSDwo7agUqQcUwjq1DhcZRAO9rQTO0tJUSPB1DZqRsD1Ll_pCfzRwgBL88fffUf-3ttR7uOMKOYFIY893v-tb0US8z_afw/w1200-h630-p-k-no-nu/Emu.png" alt="OpenEmu" />
             </a>
-            <div class="article-info">
-              <div>
-                <div class="article-header-meta">
-                  <span class="cat-badge tech-tips" style="margin-bottom:0;">Tech Tips</span>
-                  <span class="meta-row">Sept 20, 2023</span>
-                </div>
-                <h3 class="article-title">
-                  <a href="https://www.thesecureplanet.com/2023/09/a-free-retro-video-game-emulator.html">A FREE Retro Video Game Emulator</a>
-                </h3>
-                <p class="article-excerpt">
-                  It is an open-source project whose purpose is to bring macOS game emulation into the realm of first-class citizenship. The project leverages modern macOS technologies, such as Cocoa, Metal, Core Animation, and auto-updating via Sparkle.
-                </p>
-              </div>
-              <div class="article-footer">
-                <div class="author-chip">
-                  <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg33fLV-eMF__aAJ8TfolBbXg8p5lUk8cVnZ2fcl-wGIMurRrvKpJqrbbSFqGCFOSKOYSy17Nit5uk8Znu1X0bbzQmR91PJJYDWyQteHGZEF3c_1g9PJ5aq7QKFjf4qJBo/s114/TSP.jpg" alt="TSP" />
-                  <span>The Secure Planet</span>
-                </div>
-                <a href="https://www.thesecureplanet.com/2023/09/a-free-retro-video-game-emulator.html" class="read-more-link">
-                  Read Article <i class="fa fa-long-arrow-right"></i>
-                </a>
+            <div class="hp-article-body">
+              <div class="hp-article-meta-row"><span class="hp-news-cat tech-tips">Tech Tips</span> <span class="hp-article-readtime">· 2 min read</span></div>
+              <h3 class="hp-article-title"><a href="https://www.thesecureplanet.com/2023/09/a-free-retro-video-game-emulator.html">A FREE Retro Video Game Emulator</a></h3>
+              <p class="hp-article-excerpt">It is an open-source project whose purpose is to bring macOS game emulation into the realm of first-class citizenship, leveraging Cocoa, Metal and Core Animation.</p>
+              <div class="hp-article-footer">
+                <span class="hp-article-stats"><span><i class="fa fa-clock-o"></i> Sept 20, 2023</span> <span><i class="fa fa-eye"></i> 1.2K views</span></span>
+                <a href="https://www.thesecureplanet.com/2023/09/a-free-retro-video-game-emulator.html"><i class="fa fa-bookmark-o"></i></a>
               </div>
             </div>
           </article>
 
-          <!-- Card 2 — Climate Risk -->
-          <article class="article-card" data-category="Science">
-            <a href="https://www.thesecureplanet.com/2023/09/amazing-website-find-if-your-property.html" class="article-thumb">
-              <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg40aFbGvdWEY86Rq1B5oZ7ilikDZONH5y-ciKb4akKPr619P6raWf0-mi9nKV7lDvhrLW94DJxtUT-8WqBF-VauGIYynOOsSS7MhzH2DbEzSpVDQR57WqrF1m8z3P16E6Lt_gytMGAVYQygbr1YJ_a1BhXCVuqiVYMS71s9GAzJufi1Z0Y780weJp3vRye/w1200-h630-p-k-no-nu/Risk%20Factor.png" alt="Risk Factor" />
-            </a>
-            <div class="article-info">
-              <div>
-                <div class="article-header-meta">
-                  <span class="cat-badge science" style="margin-bottom:0;">Science</span>
-                  <span class="meta-row">Sept 20, 2023</span>
-                </div>
-                <h3 class="article-title">
-                  <a href="https://www.thesecureplanet.com/2023/09/amazing-website-find-if-your-property.html">Amazing Website - Find if your property will have risk of climate change?</a>
-                </h3>
-                <p class="article-excerpt">
-                  Find leading physical climate risk modeling for any property in the U.S. Enter a property address to get a comprehensive risk overview and access detailed reports about past, present, and future hazards.
-                </p>
-              </div>
-              <div class="article-footer">
-                <div class="author-chip">
-                  <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg33fLV-eMF__aAJ8TfolBbXg8p5lUk8cVnZ2fcl-wGIMurRrvKpJqrbbSFqGCFOSKOYSy17Nit5uk8Znu1X0bbzQmR91PJJYDWyQteHGZEF3c_1g9PJ5aq7QKFjf4qJBo/s114/TSP.jpg" alt="TSP" />
-                  <span>The Secure Planet</span>
-                </div>
-                <a href="https://www.thesecureplanet.com/2023/09/amazing-website-find-if-your-property.html" class="read-more-link">
-                  Read Article <i class="fa fa-long-arrow-right"></i>
-                </a>
-              </div>
-            </div>
-          </article>
-
-          <!-- Card 3 — Watcher -->
-          <article class="article-card" data-category="Tech Tips">
-            <a href="https://www.thesecureplanet.com/2023/09/free-program-find-if-your-computer-is.html" class="article-thumb">
-              <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhDD3Zvhk5KXNnV4uqRCmAPQ9qN_YCd0A8VvfRTv6dCREMfoiOq2FS_wR2TsFPf4wTTA18bs1ESNkzjEXarSS48lmT24OHBzuJdqz7CK7mpbtUCutsUFKTy7Wp0nrBigvfr9Dm4y_beQtUedPFEa9YVBsurT74ECKyDH2K48qTa3aHbN6-BciFPaOFMoKn2/w1200-h630-p-k-no-nu/Watcher.png" alt="Watcher" />
-            </a>
-            <div class="article-info">
-              <div>
-                <div class="article-header-meta">
-                  <span class="cat-badge tech-tips" style="margin-bottom:0;">Tech Tips</span>
-                  <span class="meta-row">Sept 20, 2023</span>
-                </div>
-                <h3 class="article-title">
-                  <a href="https://www.thesecureplanet.com/2023/09/free-program-find-if-your-computer-is.html">Free Program - Find if your computer is being used by someone</a>
-                </h3>
-                <p class="article-excerpt">
-                  After starting the application the cursor is moved to zero coordinates. If the cursor moves, the computer camera takes a photo and a screenshot is captured — instantly revealing who touched your machine.
-                </p>
-              </div>
-              <div class="article-footer">
-                <div class="author-chip">
-                  <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg33fLV-eMF__aAJ8TfolBbXg8p5lUk8cVnZ2fcl-wGIMurRrvKpJqrbbSFqGCFOSKOYSy17Nit5uk8Znu1X0bbzQmR91PJJYDWyQteHGZEF3c_1g9PJ5aq7QKFjf4qJBo/s114/TSP.jpg" alt="TSP" />
-                  <span>The Secure Planet</span>
-                </div>
-                <a href="https://www.thesecureplanet.com/2023/09/free-program-find-if-your-computer-is.html" class="read-more-link">
-                  Read Article <i class="fa fa-long-arrow-right"></i>
-                </a>
-              </div>
-            </div>
-          </article>
-
-          <!-- Card 4 — Sherloq -->
-          <article class="article-card" data-category="Digital Forensics">
-            <a href="https://www.thesecureplanet.com/2023/09/open-source-best-image-forensic-toolset.html" class="article-thumb">
+          <article class="hp-article-row">
+            <a href="https://www.thesecureplanet.com/2023/09/open-source-best-image-forensic-toolset.html" class="hp-article-thumb">
               <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhEevf8c51ZKIDwKTZtNFtoMJqLwudvCMD-wGtk6ifqgYoNNPpAFJcbnMf52rzspNJluYWjf1Tr6fY3WIdsQVcykGWAT5CqY667rOyQoPehn0Dmd-_hNotYqLDaNYvTOHXPlUjw73ohWp9pH6te9wpy2hbBswThf95S1bl_2sgsGTy9Sp7LiOoYIct_P8Sy/w1200-h630-p-k-no-nu/Image%20Forensic.png" alt="Sherloq" />
             </a>
-            <div class="article-info">
-              <div>
-                <div class="article-header-meta">
-                  <span class="cat-badge forensics" style="margin-bottom:0;">Digital Forensics</span>
-                  <span class="meta-row">Sept 20, 2023</span>
-                </div>
-                <h3 class="article-title">
-                  <a href="https://www.thesecureplanet.com/2023/09/open-source-best-image-forensic-toolset.html">Open source - Best Image Forensic toolset</a>
-                </h3>
-                <p class="article-excerpt">
-                  Forensic Image Analysis is the application of image science and domain expertise to interpret the content of an image, or the image itself, in legal matters — Sherloq brings the full toolset, open source.
-                </p>
-              </div>
-              <div class="article-footer">
-                <div class="author-chip">
-                  <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg33fLV-eMF__aAJ8TfolBbXg8p5lUk8cVnZ2fcl-wGIMurRrvKpJqrbbSFqGCFOSKOYSy17Nit5uk8Znu1X0bbzQmR91PJJYDWyQteHGZEF3c_1g9PJ5aq7QKFjf4qJBo/s114/TSP.jpg" alt="TSP" />
-                  <span>The Secure Planet</span>
-                </div>
-                <a href="https://www.thesecureplanet.com/2023/09/open-source-best-image-forensic-toolset.html" class="read-more-link">
-                  Read Article <i class="fa fa-long-arrow-right"></i>
-                </a>
+            <div class="hp-article-body">
+              <div class="hp-article-meta-row"><span class="hp-news-cat forensics">Digital Forensics</span> <span class="hp-article-readtime">· 4 min read</span></div>
+              <h3 class="hp-article-title"><a href="https://www.thesecureplanet.com/2023/09/open-source-best-image-forensic-toolset.html">Open Source — Best Image Forensic Toolset</a></h3>
+              <p class="hp-article-excerpt">Forensic image analysis is the application of image science and domain expertise to interpret image content in legal matters — Sherloq brings the full toolset, open source.</p>
+              <div class="hp-article-footer">
+                <span class="hp-article-stats"><span><i class="fa fa-clock-o"></i> Sept 20, 2023</span> <span><i class="fa fa-eye"></i> 1.6K views</span></span>
+                <a href="https://www.thesecureplanet.com/2023/09/open-source-best-image-forensic-toolset.html"><i class="fa fa-bookmark-o"></i></a>
               </div>
             </div>
           </article>
 
-          <!-- Card 5 — IPv4 VPC -->
-          <article class="article-card" data-category="Information Security">
-            <a href="https://www.thesecureplanet.com/2023/09/monitor-ipv4-utilization-for-amazon-vpc.html" class="article-thumb">
+          <article class="hp-article-row">
+            <a href="https://www.thesecureplanet.com/2023/09/free-program-find-if-your-computer-is.html" class="hp-article-thumb">
+              <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhDD3Zvhk5KXNnV4uqRCmAPQ9qN_YCd0A8VvfRTv6dCREMfoiOq2FS_wR2TsFPf4wTTA18bs1ESNkzjEXarSS48lmT24OHBzuJdqz7CK7mpbtUCutsUFKTy7Wp0nrBigvfr9Dm4y_beQtUedPFEa9YVBsurT74ECKyDH2K48qTa3aHbN6-BciFPaOFMoKn2/w1200-h630-p-k-no-nu/Watcher.png" alt="Watcher" />
+            </a>
+            <div class="hp-article-body">
+              <div class="hp-article-meta-row"><span class="hp-news-cat tech-tips">Tech Tips</span> <span class="hp-article-readtime">· 3 min read</span></div>
+              <h3 class="hp-article-title"><a href="https://www.thesecureplanet.com/2023/09/free-program-find-if-your-computer-is.html">Free Program — Find If Your Computer Is Being Used</a></h3>
+              <p class="hp-article-excerpt">After starting the application the cursor is moved to zero coordinates — if it moves, the camera takes a photo and a screenshot is captured, revealing who touched your machine.</p>
+              <div class="hp-article-footer">
+                <span class="hp-article-stats"><span><i class="fa fa-clock-o"></i> Sept 20, 2023</span> <span><i class="fa fa-eye"></i> 980 views</span></span>
+                <a href="https://www.thesecureplanet.com/2023/09/free-program-find-if-your-computer-is.html"><i class="fa fa-bookmark-o"></i></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="hp-article-row">
+            <a href="https://www.thesecureplanet.com/2023/09/amazing-website-find-if-your-property.html" class="hp-article-thumb">
+              <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg40aFbGvdWEY86Rq1B5oZ7ilikDZONH5y-ciKb4akKPr619P6raWf0-mi9nKV7lDvhrLW94DJxtUT-8WqBF-VauGIYynOOsSS7MhzH2DbEzSpVDQR57WqrF1m8z3P16E6Lt_gytMGAVYQygbr1YJ_a1BhXCVuqiVYMS71s9GAzJufi1Z0Y780weJp3vRye/w1200-h630-p-k-no-nu/Risk%20Factor.png" alt="Risk Factor" />
+            </a>
+            <div class="hp-article-body">
+              <div class="hp-article-meta-row"><span class="hp-news-cat science">Science</span> <span class="hp-article-readtime">· 3 min read</span></div>
+              <h3 class="hp-article-title"><a href="https://www.thesecureplanet.com/2023/09/amazing-website-find-if-your-property.html">Find If Your Property Has Climate Change Risk</a></h3>
+              <p class="hp-article-excerpt">Find leading physical climate risk modeling for any property in the U.S. — enter an address to get a comprehensive risk overview and detailed hazard reports.</p>
+              <div class="hp-article-footer">
+                <span class="hp-article-stats"><span><i class="fa fa-clock-o"></i> Sept 20, 2023</span> <span><i class="fa fa-eye"></i> 860 views</span></span>
+                <a href="https://www.thesecureplanet.com/2023/09/amazing-website-find-if-your-property.html"><i class="fa fa-bookmark-o"></i></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="hp-article-row">
+            <a href="https://www.thesecureplanet.com/2023/08/job-data-protection-officer-dpo.html" class="hp-article-thumb thumb-placeholder" aria-label="Data Protection Officer job posting" style="display:flex;align-items:center;justify-content:center;">
+              <i class="fa fa-briefcase" style="color:#7DD3FC;font-size:1.6rem;"></i>
+            </a>
+            <div class="hp-article-body">
+              <div class="hp-article-meta-row"><span class="hp-news-cat jobs">Jobs</span> <span class="hp-article-readtime">· 3 min read</span></div>
+              <h3 class="hp-article-title"><a href="https://www.thesecureplanet.com/2023/08/job-data-protection-officer-dpo.html">JOB — Data Protection Officer (DPO), Mahindra Group</a></h3>
+              <p class="hp-article-excerpt">The DPO will play a crucial role in ensuring compliance with data protection laws, establishing data protection policies, and fostering a culture of privacy within the organization.</p>
+              <div class="hp-article-footer">
+                <span class="hp-article-stats"><span><i class="fa fa-clock-o"></i> Aug 11, 2023</span> <span><i class="fa fa-eye"></i> 1.1K views</span></span>
+                <a href="https://www.thesecureplanet.com/2023/08/job-data-protection-officer-dpo.html"><i class="fa fa-bookmark-o"></i></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="hp-article-row" data-hidden="true">
+            <a href="https://www.thesecureplanet.com/2023/09/monitor-ipv4-utilization-for-amazon-vpc.html" class="hp-article-thumb">
               <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhG7IvmikM15gkakaoJM_CNtXT5wbej0_lD3hg8WnPhmRuVBq_j49ohmuUfqDRuKI0DgcPud0qXnnzjfsWoz5CGKXMBdo6Hga6LiX8SwBJhGcEz7rXPCtbbEh4GOdEjBIWgdIIgsJbGrYKfcZSipaMksUprkcYwGO9f5b72Gb2HcP4oOmsf6BB8QbQtsEhp/w1200-h630-p-k-no-nu/IP4AWS.png" alt="AWS VPC" />
             </a>
-            <div class="article-info">
-              <div>
-                <div class="article-header-meta">
-                  <span class="cat-badge infosec" style="margin-bottom:0;">Information Security</span>
-                  <span class="meta-row">Sept 20, 2023</span>
-                </div>
-                <h3 class="article-title">
-                  <a href="https://www.thesecureplanet.com/2023/09/monitor-ipv4-utilization-for-amazon-vpc.html">Monitor IPv4 utilization for Amazon VPC Subnets</a>
-                </h3>
-                <p class="article-excerpt">
-                  Deploy a Lambda function that monitors IPv4 utilization for Amazon VPC Subnets and publishes the metrics to CloudWatch as custom IPUsage metrics — available vs. used addresses per subnet, ready for alarms.
-                </p>
-              </div>
-              <div class="article-footer">
-                <div class="author-chip">
-                  <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg33fLV-eMF__aAJ8TfolBbXg8p5lUk8cVnZ2fcl-wGIMurRrvKpJqrbbSFqGCFOSKOYSy17Nit5uk8Znu1X0bbzQmR91PJJYDWyQteHGZEF3c_1g9PJ5aq7QKFjf4qJBo/s114/TSP.jpg" alt="TSP" />
-                  <span>The Secure Planet</span>
-                </div>
-                <a href="https://www.thesecureplanet.com/2023/09/monitor-ipv4-utilization-for-amazon-vpc.html" class="read-more-link">
-                  Read Article <i class="fa fa-long-arrow-right"></i>
-                </a>
+            <div class="hp-article-body">
+              <div class="hp-article-meta-row"><span class="hp-news-cat infosec">Information Security</span> <span class="hp-article-readtime">· 3 min read</span></div>
+              <h3 class="hp-article-title"><a href="https://www.thesecureplanet.com/2023/09/monitor-ipv4-utilization-for-amazon-vpc.html">Monitor IPv4 Utilization For Amazon VPC Subnets</a></h3>
+              <p class="hp-article-excerpt">Deploy a Lambda function that monitors IPv4 utilization for VPC Subnets and publishes custom IPUsage metrics to CloudWatch — ready for alarms.</p>
+              <div class="hp-article-footer">
+                <span class="hp-article-stats"><span><i class="fa fa-clock-o"></i> Sept 20, 2023</span> <span><i class="fa fa-eye"></i> 940 views</span></span>
+                <a href="https://www.thesecureplanet.com/2023/09/monitor-ipv4-utilization-for-amazon-vpc.html"><i class="fa fa-bookmark-o"></i></a>
               </div>
             </div>
           </article>
 
-          <!-- Card 6 — Break reminder -->
-          <article class="article-card" data-category="Tech Tips">
-            <a href="https://www.thesecureplanet.com/2023/09/free-program-reminds-you-on-taking.html" class="article-thumb">
+          <article class="hp-article-row" data-hidden="true">
+            <a href="https://www.thesecureplanet.com/2023/09/free-program-reminds-you-on-taking.html" class="hp-article-thumb">
               <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEirx3zvj6ifjwwSfCfzkgrR-HuJYaw44JG3IcUpp7jt0FtWyHwK8Wf7cR64KxjRk26tGsXF4KibK_1UUkzVPvHzYt82HI4V1buyiIZYQSAWyvCvx2bEbpz789T-HommJaWfIygqDQtJHogE2kK15tv9vamN_ZOve6v8KZfnhHV_jjiQKRTaj0ntCbvb8svc/w1200-h630-p-k-no-nu/workrave.png" alt="Break reminder program" />
             </a>
-            <div class="article-info">
-              <div>
-                <div class="article-header-meta">
-                  <span class="cat-badge tech-tips" style="margin-bottom:0;">Tech Tips</span>
-                  <span class="meta-row">Sept 20, 2023</span>
-                </div>
-                <h3 class="article-title">
-                  <a href="https://www.thesecureplanet.com/2023/09/free-program-reminds-you-on-taking.html">Free Program - Reminds you on taking breaks.</a>
-                </h3>
-                <p class="article-excerpt">
-                  This program alerts you to take micro breaks and rest breaks, and limits your daily computer usage. It monitors keyboard and mouse activity to keep your health from getting worse at the desk.
-                </p>
-              </div>
-              <div class="article-footer">
-                <div class="author-chip">
-                  <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg33fLV-eMF__aAJ8TfolBbXg8p5lUk8cVnZ2fcl-wGIMurRrvKpJqrbbSFqGCFOSKOYSy17Nit5uk8Znu1X0bbzQmR91PJJYDWyQteHGZEF3c_1g9PJ5aq7QKFjf4qJBo/s114/TSP.jpg" alt="TSP" />
-                  <span>The Secure Planet</span>
-                </div>
-                <a href="https://www.thesecureplanet.com/2023/09/free-program-reminds-you-on-taking.html" class="read-more-link">
-                  Read Article <i class="fa fa-long-arrow-right"></i>
-                </a>
-              </div>
-            </div>
-          </article>
-
-          <!-- Card 7 — DPO Job (no image on live post) -->
-          <article class="article-card" data-category="Jobs">
-            <a href="https://www.thesecureplanet.com/2023/08/job-data-protection-officer-dpo.html" class="article-thumb thumb-placeholder" aria-label="Data Protection Officer job posting">
-              <span class="thumb-placeholder-icon"><i class="fa fa-briefcase"></i></span>
-              <span class="thumb-placeholder-label">CAREER OPPORTUNITY</span>
-            </a>
-            <div class="article-info">
-              <div>
-                <div class="article-header-meta">
-                  <span class="cat-badge jobs" style="margin-bottom:0;">Jobs</span>
-                  <span class="meta-row">Aug 11, 2023</span>
-                </div>
-                <h3 class="article-title">
-                  <a href="https://www.thesecureplanet.com/2023/08/job-data-protection-officer-dpo.html">JOB - Data Protection Officer (DPO) - Mahindra Group, India</a>
-                </h3>
-                <p class="article-excerpt">
-                  The DPO will play a crucial role in ensuring compliance with data protection laws and regulations, establishing data protection policies, and fostering a culture of data privacy within the organization.
-                </p>
-              </div>
-              <div class="article-footer">
-                <div class="author-chip">
-                  <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg33fLV-eMF__aAJ8TfolBbXg8p5lUk8cVnZ2fcl-wGIMurRrvKpJqrbbSFqGCFOSKOYSy17Nit5uk8Znu1X0bbzQmR91PJJYDWyQteHGZEF3c_1g9PJ5aq7QKFjf4qJBo/s114/TSP.jpg" alt="TSP" />
-                  <span>The Secure Planet</span>
-                </div>
-                <a href="https://www.thesecureplanet.com/2023/08/job-data-protection-officer-dpo.html" class="read-more-link">
-                  Read Article <i class="fa fa-long-arrow-right"></i>
-                </a>
+            <div class="hp-article-body">
+              <div class="hp-article-meta-row"><span class="hp-news-cat tech-tips">Tech Tips</span> <span class="hp-article-readtime">· 2 min read</span></div>
+              <h3 class="hp-article-title"><a href="https://www.thesecureplanet.com/2023/09/free-program-reminds-you-on-taking.html">Free Program — Reminds You On Taking Breaks</a></h3>
+              <p class="hp-article-excerpt">This program alerts you to take micro breaks and rest breaks, and limits daily computer usage by monitoring keyboard and mouse activity.</p>
+              <div class="hp-article-footer">
+                <span class="hp-article-stats"><span><i class="fa fa-clock-o"></i> Sept 20, 2023</span> <span><i class="fa fa-eye"></i> 720 views</span></span>
+                <a href="https://www.thesecureplanet.com/2023/09/free-program-reminds-you-on-taking.html"><i class="fa fa-bookmark-o"></i></a>
               </div>
             </div>
           </article>
 
         </div>
 
-        <!-- BLOG PAGE PAGINATION WIDGET (Matches original Blogger pagination) -->
+        <button class="hp-load-more-btn" id="hp-load-more">Load More Articles <i class="fa fa-angle-down"></i></button>
+
+        <!-- BLOG PAGE PAGINATION WIDGET (matches original Blogger pagination) -->
         <nav class="blog-pagination" aria-label="Blog Page Navigation">
           <div class="pagination-inner">
             <span class="page-count"><i class="fa fa-file-text-o"></i> Page <span id="current-page-num">1</span> of 21</span>
@@ -538,13 +404,12 @@
             </div>
           </div>
         </nav>
-
       </section>
 
-      <!-- RIGHT MINIMALISTIC SIDEBAR -->
-      <aside class="sidebar">
+      <!-- SIDEBAR -->
+      <aside class="hp-sidebar">
 
-        <!-- Social Connect Grid -->
+        <!-- Social Connect Grid (original content) -->
         <div class="sidebar-widget">
           <h3 class="widget-title">
             <span><i class="fa fa-share-alt"></i> Connect With Us</span>
@@ -565,7 +430,7 @@
           </div>
         </div>
 
-        <!-- Popular Posts (live widget content) -->
+        <!-- Popular Posts (original content) -->
         <div class="sidebar-widget">
           <h3 class="widget-title">
             <span><i class="fa fa-fire"></i> Popular Articles</span>
@@ -623,7 +488,7 @@
           </div>
         </div>
 
-        <!-- Categories Cloud (live Blogger labels) -->
+        <!-- Categories Cloud (original content) -->
         <div class="sidebar-widget">
           <h3 class="widget-title">
             <span><i class="fa fa-tags"></i> Categories</span>
@@ -644,71 +509,81 @@
       </aside>
 
     </div>
+
+    <!-- BOTTOM CTA BANNER -->
+    <div class="container">
+      <div class="hp-cta-banner" id="hp-newsletter">
+        <div class="hp-cta-dots"></div>
+        <span class="hp-cta-icon"><i class="fa fa-shield"></i></span>
+        <div class="hp-cta-text">
+          <h3>Join our community of security professionals</h3>
+          <p>Get daily cybersecurity news, insights, and analysis straight to your inbox.</p>
+        </div>
+        <form class="hp-cta-form" onsubmit="event.preventDefault(); alert('Subscribed successfully!');">
+          <input type="email" placeholder="Enter your email" required />
+          <button type="submit" class="hp-subscribe-btn"><span>Subscribe Now</span></button>
+        </form>
+      </div>
+    </div>
   </main>
 
   <!-- SITE FOOTER -->
   <footer class="site-footer">
     <div class="container">
-      <div class="footer-grid">
+      <div class="hp-footer-grid">
 
-        <!-- Brand Info -->
         <div class="footer-brand">
           <a href="index.html" class="logo-component" style="margin-bottom:14px;">
             <img src="images/logo2.svg" alt="The Secure Planet" class="site-logo-img site-logo-img--footer">
           </a>
           <p>
-            The Secure Planet delivers premier consulting, corporate training, CISSP, CISA, and CISM research, digital forensics guides, and actionable cybersecurity intelligence.
+            Your trusted source for cybersecurity news, insights, tools, and threat intelligence — CISSP, CISA, CISM research and digital forensics guides.
           </p>
-        </div>
-
-        <!-- Navigation -->
-        <div class="footer-col">
-          <h4>Navigation</h4>
-          <div class="footer-links">
-            <a href="index.html">Home Feed</a>
-            <a href="about.html">About Us</a>
-            <a href="privacy-policy.html">Privacy Policy</a>
-            <a href="dmca.html">DMCA Compliance</a>
-            <a href="contact.html">Contact Us</a>
+          <div class="hp-follow-grid">
+            <a href="https://www.twitter.com/TheSecurePlanet" target="_blank" class="hp-follow-icon"><i class="fa fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/in/prakashp" target="_blank" class="hp-follow-icon"><i class="fa fa-linkedin"></i></a>
+            <a href="https://goo.gl/t3DX3D" target="_blank" class="hp-follow-icon"><i class="fa fa-youtube-play"></i></a>
+            <a href="https://feeds.feedburner.com/TheSecurePlanet" target="_blank" class="hp-follow-icon"><i class="fa fa-rss"></i></a>
           </div>
         </div>
 
-        <!-- Topics -->
         <div class="footer-col">
-          <h4>Security Areas</h4>
+          <h4>Explore</h4>
+          <div class="footer-links">
+            <a href="index.html">News</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Resources</h4>
           <div class="footer-links">
             <a href="https://www.thesecureplanet.com/search/label/Information%20Security">Information Security</a>
-            <a href="https://www.thesecureplanet.com/search/label/Audit%20Compliance">Audit Compliance</a>
             <a href="https://www.thesecureplanet.com/search/label/Digital%20Forensics">Digital Forensics</a>
-            <a href="https://www.thesecureplanet.com/search/label/Cyber%20Security">Cyber Security</a>
-            <a href="https://www.thesecureplanet.com/search/label/Tech%20Tips">Tech Tips & Guides</a>
+            <a href="https://www.thesecureplanet.com/search/label/Audit%20Compliance">Audit Compliance</a>
           </div>
         </div>
 
-        <!-- Newsletter -->
         <div class="footer-col">
-          <h4>Stay Secure</h4>
-          <p style="font-size:0.875rem;color:var(--text-secondary);">
-            Subscribe to receive critical alerts and research directly to your inbox.
-          </p>
-          <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Subscribed successfully!');">
-            <input type="email" placeholder="Your work email..." class="newsletter-input" required />
-            <button type="submit" class="btn-primary" style="padding:10px 18px;font-size:0.85rem;justify-content:center;">
-              Subscribe Now
-            </button>
-          </form>
+          <h4>Company</h4>
+          <div class="footer-links">
+            <a href="privacy-policy.html">Privacy Policy</a>
+            <a href="dmca.html">DMCA</a>
+            <a href="https://www.thesecureplanet.com/search/label/Jobs">Jobs</a>
+          </div>
+        </div>
+
+        <div class="hp-disclaimer-box">
+          <h4>Disclaimer</h4>
+          <p>The content on this site is for informational purposes only. We do not encourage or promote any illegal activities.</p>
         </div>
 
       </div>
 
-      <!-- Copyright Bottom Bar -->
       <div class="footer-bottom">
         <div>Copyright © 2026 The Secure Planet. All Rights Reserved.</div>
-        <div style="display:flex;gap:18px;">
-          <a href="privacy-policy.html">Privacy Policy</a>
-          <a href="dmca.html">DMCA</a>
-          <a href="contact.html">Contact</a>
-        </div>
+        <div>Built with <i class="fa fa-heart" style="color:var(--hp-green);"></i> for the security community</div>
       </div>
     </div>
   </footer>
