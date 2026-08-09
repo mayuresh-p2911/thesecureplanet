@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initDarkMode();
   initHeroRotator();
   initLoadMoreArticles();
+  initTranslateSelect();
 });
 
 /* ==========================================================================
@@ -518,4 +519,20 @@ function initBlogPagination() {
       updatePage(maxPages);
     });
   }
+}
+
+/* ==========================================================================
+   GOOGLE TRANSLATE (sidebar language select)
+   ========================================================================== */
+function initTranslateSelect() {
+  const select = document.getElementById('hp-translate-select');
+  if (!select) return;
+
+  select.addEventListener('change', () => {
+    const lang = select.value;
+    if (!lang) return;
+    const pageUrl = window.location.href;
+    window.open(`https://translate.google.com/translate?sl=auto&tl=${lang}&u=${encodeURIComponent(pageUrl)}`, '_blank');
+    select.selectedIndex = 0;
+  });
 }
