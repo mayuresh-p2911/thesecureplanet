@@ -10,7 +10,7 @@
 
   <!-- FontAwesome 4.7 for exact icon compatibility -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
-  <link rel="stylesheet" href="css/styles.css?v=16" />
+  <link rel="stylesheet" href="css/styles.css?v=23" />
 </head>
 <body>
 
@@ -56,9 +56,6 @@
       </nav>
 
       <div class="hp-header-actions">
-        <button class="hp-icon-btn" id="search-trigger" aria-label="Search">
-          <i class="fa fa-search"></i>
-        </button>
         <button class="hp-icon-btn" id="dark-mode-toggle" aria-label="Toggle dark mode">
           <i class="fa fa-moon-o"></i>
         </button>
@@ -92,6 +89,17 @@
           </div>
         </div>
       </div>
+    </div>
+  </div>
+
+  <!-- HOMEPAGE SEARCH BAR -->
+  <div class="hp-search-bar-section">
+    <div class="container">
+      <button class="hp-search-bar" id="search-trigger" aria-label="Search">
+        <i class="fa fa-search"></i>
+        <span>Search articles, guides, CVEs...</span>
+        <span class="search-shortcut">⌘K</span>
+      </button>
     </div>
   </div>
 
@@ -217,7 +225,7 @@
   </section>
 
   <!-- CATEGORY STRIP -->
-  <section class="container" style="margin-top: 8px;">
+  <section class="hp-cat-strip-wrap" style="margin-top: 8px;">
     <div class="hp-cat-strip">
       <a href="https://www.thesecureplanet.com/search/label/Information%20Security" class="hp-cat-item">
         <span class="hp-cat-icon"><i class="fa fa-shield"></i></span>
