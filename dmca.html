@@ -10,49 +10,57 @@
 </head>
 <body>
 
-  <!-- TOP BAR -->
-  <div class="top-bar">
-    <div class="container top-bar-inner">
-      <div class="top-social-list">
-        <a href="https://www.twitter.com/TheSecurePlanet" target="_blank"><i class="fa fa-twitter"></i> @TheSecurePlanet</a>
-        <a href="https://goo.gl/t3DX3D" target="_blank"><i class="fa fa-youtube-play"></i> YouTube</a>
-        <a href="https://www.linkedin.com/in/prakashp" target="_blank"><i class="fa fa-linkedin-square"></i> LinkedIn</a>
-        <a href="https://feeds.feedburner.com/TheSecurePlanet" target="_blank"><i class="fa fa-rss"></i> RSS</a>
-      </div>
-      <div class="top-actions">
-        <div class="live-status">
-          <span class="live-dot"></span>
-          <span>LIVE INTEL FEED</span>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-  <header class="site-header">
-    <div class="container header-branding">
+  <!-- UNIFIED HEADER (logo + nav) -->
+  <header class="hp-header">
+    <div class="container hp-header-inner">
       <a href="index.html" class="logo-component">
-        <img src="images/logo.svg" alt="The Secure Planet" class="site-logo-img">
+        <img src="images/logo.png" alt="The Secure Planet" class="site-logo-img site-logo-img--light">
+        <img src="images/footerlogo.png" alt="The Secure Planet" class="site-logo-img site-logo-img--dark">
       </a>
-    </div>
-  </header>
 
-  <nav class="navbar">
-    <div class="container navbar-inner">
-      <ul class="nav-links">
-        <li class="nav-item"><a href="index.html" class="nav-link"><i class="fa fa-home"></i> Home</a></li>
-        <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-        <li class="nav-item"><a href="privacy-policy.html" class="nav-link">Privacy Policy</a></li>
-        <li class="nav-item active"><a href="dmca.html" class="nav-link">DMCA</a></li>
-        <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-      </ul>
-      <div class="nav-tools">
+      <nav class="hp-nav">
+        <ul class="nav-links">
+          <li class="nav-item"><a href="index.html" class="nav-link"><i class="fa fa-home"></i> Home</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="privacy-policy.html" class="nav-link">Privacy Policy</a></li>
+          <li class="nav-item active"><a href="dmca.html" class="nav-link">DMCA</a></li>
+
+          <li class="nav-item">
+            <a href="#" class="nav-link">Categories <i class="fa fa-angle-down"></i></a>
+            <div class="dropdown-menu">
+              <a href="index.html" class="dropdown-link"><i class="fa fa-shield"></i> Information Security</a>
+              <a href="index.html" class="dropdown-link"><i class="fa fa-check-square-o"></i> Audit Compliance</a>
+              <a href="index.html" class="dropdown-link"><i class="fa fa-lock"></i> Cyber Security</a>
+              <a href="index.html" class="dropdown-link"><i class="fa fa-search-plus"></i> Digital Forensics</a>
+              <a href="index.html" class="dropdown-link"><i class="fa fa-lightbulb-o"></i> Tech Tips</a>
+              <a href="index.html" class="dropdown-link"><i class="fa fa-rocket"></i> Entrepreneurship</a>
+              <a href="index.html" class="dropdown-link"><i class="fa fa-folder-open-o"></i> General</a>
+              <a href="index.html" class="dropdown-link"><i class="fa fa-briefcase"></i> Jobs</a>
+            </div>
+          </li>
+
+          <li class="nav-item">
+            <a href="#" class="nav-link">The Secure Planet <i class="fa fa-angle-down"></i></a>
+            <div class="dropdown-menu">
+              <a href="index.html" class="dropdown-link"><i class="fa fa-terminal"></i> Science</a>
+              <a href="index.html" class="dropdown-link"><i class="fa fa-server"></i> Cloud & AWS Security</a>
+              <a href="index.html" class="dropdown-link"><i class="fa fa-book"></i> ISO Standards</a>
+              <a href="index.html" class="dropdown-link"><i class="fa fa-graduation-cap"></i> Corporate Training</a>
+            </div>
+          </li>
+
+          <li class="nav-item"><a href="#" class="nav-link">My Favorites</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="hp-header-actions">
         <button class="mobile-nav-toggle" aria-label="Toggle Menu">
           <i class="fa fa-bars"></i>
         </button>
       </div>
     </div>
-  </nav>
+  </header>
 
   <main class="main-content-area">
     <div class="container layout-grid">
