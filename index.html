@@ -10,7 +10,7 @@
 
   <!-- FontAwesome 4.7 for exact icon compatibility -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
-  <link rel="stylesheet" href="css/styles.css?v=31" />
+  <link rel="stylesheet" href="css/styles.css?v=40" />
 </head>
 <body>
 
@@ -55,15 +55,312 @@
             </div>
           </li>
 
-          <li class="nav-item">
+          <li class="nav-item nav-item--mega">
             <a href="#" class="nav-link">
               The Secure Planet <i class="fa fa-angle-down"></i>
             </a>
-            <div class="dropdown-menu">
-              <a href="index.html" class="dropdown-link"><i class="fa fa-terminal"></i> Science</a>
-              <a href="index.html" class="dropdown-link"><i class="fa fa-server"></i> Cloud & AWS Security</a>
-              <a href="index.html" class="dropdown-link"><i class="fa fa-book"></i> ISO Standards</a>
-              <a href="index.html" class="dropdown-link"><i class="fa fa-graduation-cap"></i> Corporate Training</a>
+            <div class="dropdown-menu nav-megamenu">
+              <div class="container megamenu-inner">
+                <div class="megamenu-sidebar">
+                  <a href="index.html" class="megamenu-cat-link active" data-cat="information-security"><span><i class="fa fa-shield"></i> Information Security</span><i class="fa fa-angle-right megamenu-cat-chevron"></i></a>
+                  <a href="index.html" class="megamenu-cat-link" data-cat="audit-compliance"><span><i class="fa fa-check-square-o"></i> Audit Compliance</span><i class="fa fa-angle-right megamenu-cat-chevron"></i></a>
+                  <a href="index.html" class="megamenu-cat-link" data-cat="cyber-security"><span><i class="fa fa-lock"></i> Cyber Security</span><i class="fa fa-angle-right megamenu-cat-chevron"></i></a>
+                  <a href="index.html" class="megamenu-cat-link" data-cat="digital-forensics"><span><i class="fa fa-search-plus"></i> Digital Forensics</span><i class="fa fa-angle-right megamenu-cat-chevron"></i></a>
+                  <a href="index.html" class="megamenu-cat-link" data-cat="entrepreneurship"><span><i class="fa fa-rocket"></i> Entrepreneurship</span><i class="fa fa-angle-right megamenu-cat-chevron"></i></a>
+                  <a href="index.html" class="megamenu-cat-link" data-cat="general"><span><i class="fa fa-folder-open-o"></i> General</span><i class="fa fa-angle-right megamenu-cat-chevron"></i></a>
+                  <a href="index.html" class="megamenu-cat-link" data-cat="science"><span><i class="fa fa-flask"></i> Science</span><i class="fa fa-angle-right megamenu-cat-chevron"></i></a>
+                  <a href="index.html" class="megamenu-cat-link" data-cat="tech-tips"><span><i class="fa fa-lightbulb-o"></i> Tech Tips</span><i class="fa fa-angle-right megamenu-cat-chevron"></i></a>
+                  <a href="index.html" class="megamenu-cat-link" data-cat="jobs"><span><i class="fa fa-briefcase"></i> Jobs</span><i class="fa fa-angle-right megamenu-cat-chevron"></i></a>
+                </div>
+
+                <div class="megamenu-panel active" data-cat-panel="information-security">
+                  <div class="megamenu-panel-header">
+                    <i class="fa fa-shield"></i>
+                    <h2>Information Security</h2>
+                  </div>
+                  <p class="megamenu-panel-desc">Explore the latest guides, tutorials, tools, and best practices to help you stay secure and informed.</p>
+                  <div class="megamenu-latest-row">
+                    <h3>Latest from Information Security</h3>
+                    <a href="https://www.thesecureplanet.com/search/label/Information%20Security" class="megamenu-viewall">View all <i class="fa fa-arrow-right"></i></a>
+                  </div>
+                  <div class="megamenu-posts-grid">
+                    <a href="https://www.thesecureplanet.com/2023/09/monitor-ipv4-utilization-for-amazon-vpc.html" class="megamenu-post">
+                      <div class="megamenu-post-img">
+                        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhG7IvmikM15gkakaoJM_CNtXT5wbej0_lD3hg8WnPhmRuVBq_j49ohmuUfqDRuKI0DgcPud0qXnnzjfsWoz5CGKXMBdo6Hga6LiX8SwBJhGcEz7rXPCtbbEh4GOdEjBIWgdIIgsJbGrYKfcZSipaMksUprkcYwGO9f5b72Gb2HcP4oOmsf6BB8QbQtsEhp/w1200-h630-p-k-no-nu/IP4AWS.png" alt="Monitor IPv4 utilization for Amazon VPC Subnets" />
+                        <span class="megamenu-post-badge megamenu-post-badge--infosec">Information Security</span>
+                      </div>
+                      <h4 class="megamenu-post-title">Monitor IPv4 utilization for Amazon VPC Subnets</h4>
+                      <div class="megamenu-post-date"><i class="fa fa-calendar-o"></i> Sep 20, 2023</div>
+                    </a>
+
+                    <a href="post.html" class="megamenu-post">
+                      <div class="megamenu-post-img megamenu-post-img--placeholder">
+                        <i class="fa fa-magic"></i>
+                        <span class="megamenu-post-badge megamenu-post-badge--infosec">Information Security</span>
+                      </div>
+                      <h4 class="megamenu-post-title">FREE - Prompt engineering course</h4>
+                      <div class="megamenu-post-date"><i class="fa fa-calendar-o"></i> Aug 11, 2023</div>
+                    </a>
+
+                    <a href="post.html" class="megamenu-post">
+                      <div class="megamenu-post-img">
+                        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgLZwFiQkidh_U6ltudssqbNM9dyHpSk9fEYKQEvTan94FeKv-tPe48rdNueVjzTXDF-1HbCtJWg7y0MsXfLvA-aVjE_D1FNaFp-wZ1q_oO2BJOYt2akhyOTgM1CaduCnJETt4TGGl6iONh/s16000/Fuzzing.png" alt="Free - The Fuzzing Book" />
+                        <span class="megamenu-post-badge megamenu-post-badge--infosec">Information Security</span>
+                      </div>
+                      <h4 class="megamenu-post-title">Free - The Fuzzing Book</h4>
+                      <div class="megamenu-post-date"><i class="fa fa-calendar-o"></i> Oct 17, 2021</div>
+                    </a>
+
+                    <a href="post.html" class="megamenu-post">
+                      <div class="megamenu-post-img megamenu-post-img--placeholder">
+                        <i class="fa fa-bug"></i>
+                        <span class="megamenu-post-badge megamenu-post-badge--infosec">Information Security</span>
+                      </div>
+                      <h4 class="megamenu-post-title">The Debugging Book — Tools and Techniques for Automated Software Debugging</h4>
+                      <div class="megamenu-post-date"><i class="fa fa-calendar-o"></i> Mar 21, 2021</div>
+                    </a>
+                  </div>
+                  <div class="megamenu-panel-footer">
+                    <div class="megamenu-feature"><i class="fa fa-bookmark-o"></i><div><strong>Curated Content</strong><span>Handpicked high-quality resources</span></div></div>
+                    <div class="megamenu-feature"><i class="fa fa-file-text-o"></i><div><strong>Practical Guides</strong><span>Step-by-step tutorials and how-tos</span></div></div>
+                    <div class="megamenu-feature"><i class="fa fa-bell-o"></i><div><strong>Stay Updated</strong><span>New content added regularly</span></div></div>
+                    <a href="https://www.thesecureplanet.com/search/label/Information%20Security" class="megamenu-explore-btn">Explore all Information Security <i class="fa fa-arrow-right"></i></a>
+                  </div>
+                </div>
+
+                <div class="megamenu-panel" data-cat-panel="audit-compliance">
+                  <div class="megamenu-panel-header">
+                    <i class="fa fa-check-square-o"></i>
+                    <h2>Audit Compliance</h2>
+                  </div>
+                  <p class="megamenu-panel-desc">Frameworks, checklists, and configuration baselines to keep your organization audit-ready.</p>
+                  <div class="megamenu-latest-row">
+                    <h3>Latest from Audit Compliance</h3>
+                    <a href="https://www.thesecureplanet.com/search/label/Audit%20Compliance" class="megamenu-viewall">View all <i class="fa fa-arrow-right"></i></a>
+                  </div>
+                  <div class="megamenu-posts-grid">
+                    <a href="https://www.thesecureplanet.com/2021/10/free-security-configuration-baselines.html" class="megamenu-post">
+                      <div class="megamenu-post-img">
+                        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgXdHTDLEbFUABXDBXgOnolYKFcmG7D2s3Umi_UsUNXLerC2jnC_noiTX3bb1PxDuWS5ycd0yyNmALw27e_0BiiStEakR2amHEkoVFqGkHjNfsy1aoDZnmvSHQqePuoW3LpTJbk2hJUcFSH/s16000/MS.png" alt="Security Configuration Baselines For Microsoft Products" />
+                        <span class="megamenu-post-badge megamenu-post-badge--audit">Audit Compliance</span>
+                      </div>
+                      <h4 class="megamenu-post-title">FREE - Security Configuration Baselines For Microsoft Products</h4>
+                      <div class="megamenu-post-date"><i class="fa fa-calendar-o"></i> Oct 17, 2021</div>
+                    </a>
+                  </div>
+                  <div class="megamenu-panel-footer">
+                    <div class="megamenu-feature"><i class="fa fa-bookmark-o"></i><div><strong>Curated Content</strong><span>Handpicked high-quality resources</span></div></div>
+                    <div class="megamenu-feature"><i class="fa fa-file-text-o"></i><div><strong>Practical Guides</strong><span>Step-by-step tutorials and how-tos</span></div></div>
+                    <div class="megamenu-feature"><i class="fa fa-bell-o"></i><div><strong>Stay Updated</strong><span>New content added regularly</span></div></div>
+                    <a href="https://www.thesecureplanet.com/search/label/Audit%20Compliance" class="megamenu-explore-btn">Explore all Audit Compliance <i class="fa fa-arrow-right"></i></a>
+                  </div>
+                </div>
+
+                <div class="megamenu-panel" data-cat-panel="cyber-security">
+                  <div class="megamenu-panel-header">
+                    <i class="fa fa-lock"></i>
+                    <h2>Cyber Security</h2>
+                  </div>
+                  <p class="megamenu-panel-desc">Threat intelligence, defensive tooling, and incident response resources from the field.</p>
+                  <div class="megamenu-latest-row">
+                    <h3>Latest from Cyber Security</h3>
+                    <a href="https://www.thesecureplanet.com/search/label/Cyber%20Security" class="megamenu-viewall">View all <i class="fa fa-arrow-right"></i></a>
+                  </div>
+                  <div class="megamenu-posts-grid">
+                    <a href="https://www.thesecureplanet.com/2023/09/open-source-first-response-tool-for.html" class="megamenu-post">
+                      <div class="megamenu-post-img">
+                        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEisNGrYQSs1rjvMxymCoZ1l0jLcAcB6g-QvULtSOUsx1M0DHGMbf5IhXnyiXLlBVrRml1klLCrKqnXzrxt-w_nRMuVbPHT_Ladxp4JVac6ZJcbhpTKc9f7HqCtx11kRpOyxUanSH--0NRy_ThGpwlGVnfwZ1LqV02CiYIK8XF1wPlw-0qPJ4529_5kNq6Hq/w640-h276/TH1.jpg" alt="Open Source - First Response Tool For Threat Hunting" />
+                        <span class="megamenu-post-badge megamenu-post-badge--cybersec">Cyber Security</span>
+                      </div>
+                      <h4 class="megamenu-post-title">Open Source - First Response Tool For Threat Hunting</h4>
+                      <div class="megamenu-post-date"><i class="fa fa-calendar-o"></i> Aug 11, 2023</div>
+                    </a>
+                  </div>
+                  <div class="megamenu-panel-footer">
+                    <div class="megamenu-feature"><i class="fa fa-bookmark-o"></i><div><strong>Curated Content</strong><span>Handpicked high-quality resources</span></div></div>
+                    <div class="megamenu-feature"><i class="fa fa-file-text-o"></i><div><strong>Practical Guides</strong><span>Step-by-step tutorials and how-tos</span></div></div>
+                    <div class="megamenu-feature"><i class="fa fa-bell-o"></i><div><strong>Stay Updated</strong><span>New content added regularly</span></div></div>
+                    <a href="https://www.thesecureplanet.com/search/label/Cyber%20Security" class="megamenu-explore-btn">Explore all Cyber Security <i class="fa fa-arrow-right"></i></a>
+                  </div>
+                </div>
+
+                <div class="megamenu-panel" data-cat-panel="digital-forensics">
+                  <div class="megamenu-panel-header">
+                    <i class="fa fa-search-plus"></i>
+                    <h2>Digital Forensics</h2>
+                  </div>
+                  <p class="megamenu-panel-desc">Investigation techniques and open-source toolsets for digital evidence analysis.</p>
+                  <div class="megamenu-latest-row">
+                    <h3>Latest from Digital Forensics</h3>
+                    <a href="https://www.thesecureplanet.com/search/label/Digital%20Forensics" class="megamenu-viewall">View all <i class="fa fa-arrow-right"></i></a>
+                  </div>
+                  <div class="megamenu-posts-grid">
+                    <a href="https://www.thesecureplanet.com/2023/09/open-source-best-image-forensic-toolset.html" class="megamenu-post">
+                      <div class="megamenu-post-img">
+                        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhEevf8c51ZKIDwKTZtNFtoMJqLwudvCMD-wGtk6ifqgYoNNPpAFJcbnMf52rzspNJluYWjf1Tr6fY3WIdsQVcykGWAT5CqY667rOyQoPehn0Dmd-_hNotYqLDaNYvTOHXPlUjw73ohWp9pH6te9wpy2hbBswThf95S1bl_2sgsGTy9Sp7LiOoYIct_P8Sy/w1200-h630-p-k-no-nu/Image%20Forensic.png" alt="Open Source — Best Image Forensic Toolset" />
+                        <span class="megamenu-post-badge megamenu-post-badge--forensics">Digital Forensics</span>
+                      </div>
+                      <h4 class="megamenu-post-title">Open Source — Best Image Forensic Toolset</h4>
+                      <div class="megamenu-post-date"><i class="fa fa-calendar-o"></i> Sep 20, 2023</div>
+                    </a>
+                  </div>
+                  <div class="megamenu-panel-footer">
+                    <div class="megamenu-feature"><i class="fa fa-bookmark-o"></i><div><strong>Curated Content</strong><span>Handpicked high-quality resources</span></div></div>
+                    <div class="megamenu-feature"><i class="fa fa-file-text-o"></i><div><strong>Practical Guides</strong><span>Step-by-step tutorials and how-tos</span></div></div>
+                    <div class="megamenu-feature"><i class="fa fa-bell-o"></i><div><strong>Stay Updated</strong><span>New content added regularly</span></div></div>
+                    <a href="https://www.thesecureplanet.com/search/label/Digital%20Forensics" class="megamenu-explore-btn">Explore all Digital Forensics <i class="fa fa-arrow-right"></i></a>
+                  </div>
+                </div>
+
+                <div class="megamenu-panel" data-cat-panel="entrepreneurship">
+                  <div class="megamenu-panel-header">
+                    <i class="fa fa-rocket"></i>
+                    <h2>Entrepreneurship</h2>
+                  </div>
+                  <p class="megamenu-panel-desc">Ideas, innovation, and stories from builders pushing new technology forward.</p>
+                  <div class="megamenu-latest-row">
+                    <h3>Latest from Entrepreneurship</h3>
+                    <a href="https://www.thesecureplanet.com/search/label/Entrepreneurship" class="megamenu-viewall">View all <i class="fa fa-arrow-right"></i></a>
+                  </div>
+                  <div class="megamenu-posts-grid">
+                    <a href="post.html" class="megamenu-post">
+                      <div class="megamenu-post-img">
+                        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgKQMP5tdTx-6XdpO64Vsl2dYFwshqDP-n7fF-wlrBQKpj_JulL1SBUXPokVdXTeOQVgj2-cDixaFpiCXicmtlCLyBH8mTag-2HNBb2sM3VxudCich3YVwvWSet-R-onFdHWyVy8_1-SsL-/s400/MICHELIN-X-TWEEL.jpg" alt="Here Comes Puncture-Less Tyre - Tweel" />
+                        <span class="megamenu-post-badge megamenu-post-badge--entrepreneur">Entrepreneurship</span>
+                      </div>
+                      <h4 class="megamenu-post-title">Here Comes Puncture-Less Tyre - Tweel</h4>
+                      <div class="megamenu-post-date"><i class="fa fa-calendar-o"></i> Jan 20, 2015</div>
+                    </a>
+                  </div>
+                  <div class="megamenu-panel-footer">
+                    <div class="megamenu-feature"><i class="fa fa-bookmark-o"></i><div><strong>Curated Content</strong><span>Handpicked high-quality resources</span></div></div>
+                    <div class="megamenu-feature"><i class="fa fa-file-text-o"></i><div><strong>Practical Guides</strong><span>Step-by-step tutorials and how-tos</span></div></div>
+                    <div class="megamenu-feature"><i class="fa fa-bell-o"></i><div><strong>Stay Updated</strong><span>New content added regularly</span></div></div>
+                    <a href="https://www.thesecureplanet.com/search/label/Entrepreneurship" class="megamenu-explore-btn">Explore all Entrepreneurship <i class="fa fa-arrow-right"></i></a>
+                  </div>
+                </div>
+
+                <div class="megamenu-panel" data-cat-panel="general">
+                  <div class="megamenu-panel-header">
+                    <i class="fa fa-folder-open-o"></i>
+                    <h2>General</h2>
+                  </div>
+                  <p class="megamenu-panel-desc">A mix of tools, ideas, and updates from across The Secure Planet.</p>
+                  <div class="megamenu-latest-row">
+                    <h3>Latest from General</h3>
+                    <a href="https://www.thesecureplanet.com/search/label/General" class="megamenu-viewall">View all <i class="fa fa-arrow-right"></i></a>
+                  </div>
+                  <div class="megamenu-posts-grid">
+                    <a href="index.html" class="megamenu-post">
+                      <div class="megamenu-post-img megamenu-post-img--placeholder">
+                        <i class="fa fa-folder-open-o"></i>
+                        <span class="megamenu-post-badge megamenu-post-badge--general">General</span>
+                      </div>
+                      <h4 class="megamenu-post-title">Browse all General posts</h4>
+                      <div class="megamenu-post-date"><i class="fa fa-arrow-right"></i> View category</div>
+                    </a>
+                  </div>
+                  <div class="megamenu-panel-footer">
+                    <div class="megamenu-feature"><i class="fa fa-bookmark-o"></i><div><strong>Curated Content</strong><span>Handpicked high-quality resources</span></div></div>
+                    <div class="megamenu-feature"><i class="fa fa-file-text-o"></i><div><strong>Practical Guides</strong><span>Step-by-step tutorials and how-tos</span></div></div>
+                    <div class="megamenu-feature"><i class="fa fa-bell-o"></i><div><strong>Stay Updated</strong><span>New content added regularly</span></div></div>
+                    <a href="https://www.thesecureplanet.com/search/label/General" class="megamenu-explore-btn">Explore all General <i class="fa fa-arrow-right"></i></a>
+                  </div>
+                </div>
+
+                <div class="megamenu-panel" data-cat-panel="science">
+                  <div class="megamenu-panel-header">
+                    <i class="fa fa-flask"></i>
+                    <h2>Science</h2>
+                  </div>
+                  <p class="megamenu-panel-desc">Research, data, and discovery from across the scientific world.</p>
+                  <div class="megamenu-latest-row">
+                    <h3>Latest from Science</h3>
+                    <a href="https://www.thesecureplanet.com/search/label/Science" class="megamenu-viewall">View all <i class="fa fa-arrow-right"></i></a>
+                  </div>
+                  <div class="megamenu-posts-grid">
+                    <a href="https://www.thesecureplanet.com/2023/09/amazing-website-find-if-your-property.html" class="megamenu-post">
+                      <div class="megamenu-post-img">
+                        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg40aFbGvdWEY86Rq1B5oZ7ilikDZONH5y-ciKb4akKPr619P6raWf0-mi9nKV7lDvhrLW94DJxtUT-8WqBF-VauGIYynOOsSS7MhzH2DbEzSpVDQR57WqrF1m8z3P16E6Lt_gytMGAVYQygbr1YJ_a1BhXCVuqiVYMS71s9GAzJufi1Z0Y780weJp3vRye/w1200-h630-p-k-no-nu/Risk%20Factor.png" alt="Find If Your Property Has Climate Change Risk" />
+                        <span class="megamenu-post-badge megamenu-post-badge--science">Science</span>
+                      </div>
+                      <h4 class="megamenu-post-title">Find If Your Property Has Climate Change Risk</h4>
+                      <div class="megamenu-post-date"><i class="fa fa-calendar-o"></i> Sep 20, 2023</div>
+                    </a>
+                  </div>
+                  <div class="megamenu-panel-footer">
+                    <div class="megamenu-feature"><i class="fa fa-bookmark-o"></i><div><strong>Curated Content</strong><span>Handpicked high-quality resources</span></div></div>
+                    <div class="megamenu-feature"><i class="fa fa-file-text-o"></i><div><strong>Practical Guides</strong><span>Step-by-step tutorials and how-tos</span></div></div>
+                    <div class="megamenu-feature"><i class="fa fa-bell-o"></i><div><strong>Stay Updated</strong><span>New content added regularly</span></div></div>
+                    <a href="https://www.thesecureplanet.com/search/label/Science" class="megamenu-explore-btn">Explore all Science <i class="fa fa-arrow-right"></i></a>
+                  </div>
+                </div>
+
+                <div class="megamenu-panel" data-cat-panel="tech-tips">
+                  <div class="megamenu-panel-header">
+                    <i class="fa fa-lightbulb-o"></i>
+                    <h2>Tech Tips</h2>
+                  </div>
+                  <p class="megamenu-panel-desc">Practical how-tos, free tools, and tricks to get more out of your tech.</p>
+                  <div class="megamenu-latest-row">
+                    <h3>Latest from Tech Tips</h3>
+                    <a href="https://www.thesecureplanet.com/search/label/Tech%20Tips" class="megamenu-viewall">View all <i class="fa fa-arrow-right"></i></a>
+                  </div>
+                  <div class="megamenu-posts-grid">
+                    <a href="https://www.thesecureplanet.com/2023/09/a-free-retro-video-game-emulator.html" class="megamenu-post">
+                      <div class="megamenu-post-img">
+                        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhvWwS2mNvKHmo2PHc1Tw5nOTHwQkQDmBKVFsgjzniRXVyqvV911niEBD67Qr1B_ttMeJwpaQz77orAPJg8nRWhuVauwJTPytWSDwo7agUqQcUwjq1DhcZRAO9rQTO0tJUSPB1DZqRsD1Ll_pCfzRwgBL88fffUf-3ttR7uOMKOYFIY893v-tb0US8z_afw/w1200-h630-p-k-no-nu/Emu.png" alt="A FREE Retro Video Game Emulator" />
+                        <span class="megamenu-post-badge megamenu-post-badge--techtips">Tech Tips</span>
+                      </div>
+                      <h4 class="megamenu-post-title">A FREE Retro Video Game Emulator</h4>
+                      <div class="megamenu-post-date"><i class="fa fa-calendar-o"></i> Sep 20, 2023</div>
+                    </a>
+
+                    <a href="https://www.thesecureplanet.com/2023/09/free-program-find-if-your-computer-is.html" class="megamenu-post">
+                      <div class="megamenu-post-img">
+                        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhDD3Zvhk5KXNnV4uqRCmAPQ9qN_YCd0A8VvfRTv6dCREMfoiOq2FS_wR2TsFPf4wTTA18bs1ESNkzjEXarSS48lmT24OHBzuJdqz7CK7mpbtUCutsUFKTy7Wp0nrBigvfr9Dm4y_beQtUedPFEa9YVBsurT74ECKyDH2K48qTa3aHbN6-BciFPaOFMoKn2/w1200-h630-p-k-no-nu/Watcher.png" alt="Free Program — Find If Your Computer Is Being Used" />
+                        <span class="megamenu-post-badge megamenu-post-badge--techtips">Tech Tips</span>
+                      </div>
+                      <h4 class="megamenu-post-title">Free Program — Find If Your Computer Is Being Used</h4>
+                      <div class="megamenu-post-date"><i class="fa fa-calendar-o"></i> Sep 20, 2023</div>
+                    </a>
+                  </div>
+                  <div class="megamenu-panel-footer">
+                    <div class="megamenu-feature"><i class="fa fa-bookmark-o"></i><div><strong>Curated Content</strong><span>Handpicked high-quality resources</span></div></div>
+                    <div class="megamenu-feature"><i class="fa fa-file-text-o"></i><div><strong>Practical Guides</strong><span>Step-by-step tutorials and how-tos</span></div></div>
+                    <div class="megamenu-feature"><i class="fa fa-bell-o"></i><div><strong>Stay Updated</strong><span>New content added regularly</span></div></div>
+                    <a href="https://www.thesecureplanet.com/search/label/Tech%20Tips" class="megamenu-explore-btn">Explore all Tech Tips <i class="fa fa-arrow-right"></i></a>
+                  </div>
+                </div>
+
+                <div class="megamenu-panel" data-cat-panel="jobs">
+                  <div class="megamenu-panel-header">
+                    <i class="fa fa-briefcase"></i>
+                    <h2>Jobs</h2>
+                  </div>
+                  <p class="megamenu-panel-desc">Open roles in security, compliance, and tech worth knowing about.</p>
+                  <div class="megamenu-latest-row">
+                    <h3>Latest from Jobs</h3>
+                    <a href="https://www.thesecureplanet.com/search/label/Jobs" class="megamenu-viewall">View all <i class="fa fa-arrow-right"></i></a>
+                  </div>
+                  <div class="megamenu-posts-grid">
+                    <a href="https://www.thesecureplanet.com/2023/08/job-data-protection-officer-dpo.html" class="megamenu-post">
+                      <div class="megamenu-post-img megamenu-post-img--placeholder">
+                        <i class="fa fa-briefcase"></i>
+                        <span class="megamenu-post-badge megamenu-post-badge--jobs">Jobs</span>
+                      </div>
+                      <h4 class="megamenu-post-title">JOB — Data Protection Officer (DPO), Mahindra Group</h4>
+                      <div class="megamenu-post-date"><i class="fa fa-calendar-o"></i> Aug 11, 2023</div>
+                    </a>
+                  </div>
+                  <div class="megamenu-panel-footer">
+                    <div class="megamenu-feature"><i class="fa fa-bookmark-o"></i><div><strong>Curated Content</strong><span>Handpicked high-quality resources</span></div></div>
+                    <div class="megamenu-feature"><i class="fa fa-file-text-o"></i><div><strong>Practical Guides</strong><span>Step-by-step tutorials and how-tos</span></div></div>
+                    <div class="megamenu-feature"><i class="fa fa-bell-o"></i><div><strong>Stay Updated</strong><span>New content added regularly</span></div></div>
+                    <a href="https://www.thesecureplanet.com/search/label/Jobs" class="megamenu-explore-btn">Explore all Jobs <i class="fa fa-arrow-right"></i></a>
+                  </div>
+                </div>
+              </div>
             </div>
           </li>
 

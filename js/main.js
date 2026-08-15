@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initHeroRotator();
   initLoadMoreArticles();
   initTranslateSelect();
+  initMegaMenu();
 });
 
 /* ==========================================================================
@@ -344,6 +345,34 @@ function initFeaturedSlider() {
   });
 
   startTimer();
+}
+
+/* ==========================================================================
+   MEGA MENU — "The Secure Planet" nav item: hovering a sidebar category
+   swaps the posts panel shown on the right
+   ========================================================================== */
+function initMegaMenu() {
+  const megamenu = document.querySelector('.nav-megamenu');
+  if (!megamenu) return;
+
+  const catLinks = megamenu.querySelectorAll('.megamenu-cat-link');
+  const panels = megamenu.querySelectorAll('.megamenu-panel');
+  const defaultCat = megamenu.querySelector('.megamenu-cat-link.active')?.dataset.cat;
+
+  const activate = (cat) => {
+    catLinks.forEach((link) => link.classList.toggle('active', link.dataset.cat === cat));
+    panels.forEach((panel) => panel.classList.toggle('active', panel.dataset.catPanel === cat));
+  };
+
+  catLinks.forEach((link) => {
+    link.addEventListener('mouseenter', () => activate(link.dataset.cat));
+    link.addEventListener('focus', () => activate(link.dataset.cat));
+  });
+
+  const navItem = megamenu.closest('.nav-item');
+  if (navItem && defaultCat) {
+    navItem.addEventListener('mouseleave', () => activate(defaultCat));
+  }
 }
 
 /* ==========================================================================
