@@ -1830,6 +1830,468 @@ button { cursor: pointer; }
   .about-sections-list dt { flex: none; }
 }
 
+/* ==========================================================================
+   ABOUT PAGE — infographic-style layout
+   ========================================================================== */
+.about-container {
+  max-width: 1080px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.about-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  padding: 36px 40px;
+}
+
+.about-icon-circle {
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-pill);
+  background: var(--hp-green-soft);
+  color: var(--hp-green);
+  font-size: 1.05rem;
+}
+
+.about-icon-circle--lg { width: 52px; height: 52px; font-size: 1.3rem; }
+
+/* Hero */
+.about-hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 8px 0 12px;
+}
+
+.about-hero-text { max-width: 520px; }
+
+.about-eyebrow {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: var(--hp-green);
+  border-left: 3px solid var(--hp-green);
+  padding-left: 10px;
+  margin-bottom: 14px;
+}
+
+.about-hero-title {
+  font-size: 2.25rem;
+  font-weight: 800;
+  line-height: 1.18;
+  color: var(--text-main);
+  margin: 0 0 16px;
+}
+
+.about-hero-title span { color: var(--hp-green); }
+
+.about-hero-intro {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.65;
+  margin: 0 0 20px;
+}
+
+.about-pullquote {
+  position: relative;
+  margin: 0;
+  padding: 18px 22px;
+  background: var(--hp-green-soft);
+  border: 1px solid var(--border-subtle);
+  border-left: 3px solid var(--hp-green);
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--text-main);
+  font-style: normal;
+}
+
+.about-pullquote span { color: var(--hp-green); }
+
+.about-pullquote--sm {
+  margin-top: 20px;
+  font-weight: 500;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+.about-hero-visual {
+  position: relative;
+  width: 220px;
+  height: 220px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-hero-rings {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background:
+    repeating-radial-gradient(circle at center, var(--hp-green-glow) 0 1.5px, transparent 1.5px 34px);
+  opacity: 0.55;
+  -webkit-mask-image: radial-gradient(circle, #000 68%, transparent 72%);
+  mask-image: radial-gradient(circle, #000 68%, transparent 72%);
+}
+
+.about-hero-plate {
+  position: relative;
+  width: 108px;
+  height: 108px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-lg);
+  background: var(--hp-green);
+  color: #fff;
+  font-size: 2.6rem;
+  box-shadow: var(--shadow-lg);
+}
+
+/* Section headings shared */
+.about-card-heading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.about-card-heading h2 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin: 0;
+}
+
+.about-section-title {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin: 0 0 28px;
+}
+
+.about-section-title span { color: var(--hp-green); }
+
+.about-section-title--left {
+  text-align: left;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.about-section-title--left i { color: var(--hp-green); }
+
+/* Who am I / Expertise */
+.about-whoami {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.about-whoami-left p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.7;
+  margin: 0 0 12px;
+}
+
+.about-expertise-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 24px;
+}
+
+.about-check-list { list-style: none; margin: 0; padding: 0; }
+
+.about-check-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  padding: 9px 0;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.about-check-list li:last-child { border-bottom: none; }
+
+.about-check-list i { color: var(--hp-green); margin-top: 2px; flex-shrink: 0; }
+
+/* What do I do */
+.about-whatido-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 24px;
+}
+
+.about-whatido-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 12px;
+}
+
+.about-whatido-item p {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  line-height: 1.55;
+  margin: 0;
+}
+
+.about-whatido-item strong { color: var(--text-main); }
+
+/* Sections grid */
+/* Bento grid — asymmetric tile sizes: Information Security is the big
+   2x2 flagship tile; Cyber Security & Science are wide 2x1 tiles; the
+   rest are plain 1x1 cells. `dense` auto-flow backfills any holes left
+   by the big/wide tiles, so it stays gap-free as cards are added. Card
+   order in the DOM stays 01..08 (numbered) — visual position may shuffle. */
+.about-sections-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+@media (min-width: 901px) {
+  .about-sections-grid {
+    grid-auto-rows: minmax(150px, auto);
+    grid-auto-flow: dense;
+  }
+
+  .about-section-card:nth-child(4) { grid-column: span 2; grid-row: span 2; }
+  .about-section-card:nth-child(2),
+  .about-section-card:nth-child(6) { grid-column: span 2; }
+}
+
+.about-section-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--bg-root);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 22px 18px 18px;
+  text-align: center;
+}
+
+/* Featured tile — Information Security, the 2x2 flagship */
+.about-section-card:nth-child(4) {
+  justify-content: center;
+  background: var(--hp-green-soft);
+  border-color: rgba(22, 163, 74, 0.25);
+}
+
+.about-section-card:nth-child(4) .about-icon-circle {
+  width: 56px;
+  height: 56px;
+  font-size: 1.4rem;
+}
+
+.about-section-card:nth-child(4) h4 { font-size: 1.05rem; }
+
+/* Wide tiles — Cyber Security & Science, laid out horizontally */
+.about-section-card:nth-child(2),
+.about-section-card:nth-child(6) {
+  flex-direction: row;
+  align-items: center;
+  text-align: left;
+  gap: 16px;
+  padding: 20px 22px;
+}
+
+.about-section-card:nth-child(2) .about-icon-circle,
+.about-section-card:nth-child(6) .about-icon-circle {
+  margin: 0;
+  flex-shrink: 0;
+}
+
+.about-section-card:nth-child(2) .about-section-num,
+.about-section-card:nth-child(6) .about-section-num {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  margin: 0;
+}
+
+.about-section-num {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  margin-bottom: 10px;
+}
+
+.about-section-card .about-icon-circle { margin: 0 auto 12px; }
+
+.about-section-card h4 {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin: 0 0 6px;
+}
+
+.about-section-card p {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Jobs / Giving back */
+.about-jobs,
+.about-giving {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.about-jobs h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin: 0 0 6px;
+}
+
+.about-jobs p,
+.about-giving p {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+  margin: 0;
+}
+
+.about-giving p { flex: 1; }
+
+.about-giving-tagline {
+  flex-shrink: 0;
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--hp-green);
+  text-align: right;
+  line-height: 1.4;
+}
+
+/* Disclaimers */
+.about-disclaimer-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px 32px;
+}
+
+.about-disclaimer-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.about-disclaimer-item i {
+  color: var(--hp-green);
+  font-size: 0.95rem;
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+
+.about-disclaimer-item p {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.about-disclaimer-item strong { color: var(--text-main); }
+
+/* Signoff band */
+.about-signoff-band {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+  padding: 8px 4px 4px;
+}
+
+.about-signoff-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.about-avatar {
+  width: 58px;
+  height: 58px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--bg-inset);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-muted);
+  font-size: 1.4rem;
+}
+
+.about-signoff-greeting { font-size: 0.82rem; color: var(--text-secondary); }
+.about-signoff-name { font-size: 1.1rem; font-weight: 700; color: var(--hp-green); }
+.about-signoff-brand { font-size: 0.82rem; color: var(--text-secondary); margin-bottom: 4px; }
+
+.about-signoff-email {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.82rem;
+  color: var(--brand-blue);
+}
+
+.about-signoff-right {
+  background: var(--hp-green-soft);
+  border-radius: var(--radius-md);
+  padding: 16px 22px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-main);
+  line-height: 1.55;
+}
+
+@media (max-width: 900px) {
+  .about-hero { flex-direction: column-reverse; text-align: center; }
+  .about-hero-text { max-width: 100%; }
+  .about-hero-title { font-size: 1.9rem; }
+  .about-whoami { grid-template-columns: 1fr; }
+  .about-whatido-grid { grid-template-columns: repeat(2, 1fr); }
+  .about-sections-grid { grid-template-columns: repeat(2, 1fr); }
+  .about-disclaimer-grid { grid-template-columns: 1fr; }
+  .about-jobs, .about-giving { flex-direction: column; align-items: flex-start; text-align: left; }
+  .about-giving-tagline { text-align: left; }
+  .about-signoff-band { flex-direction: column; align-items: flex-start; }
+}
+
+@media (max-width: 560px) {
+  .about-card { padding: 24px 20px; }
+  .about-expertise-grid { grid-template-columns: 1fr; }
+  .about-whatido-grid { grid-template-columns: 1fr 1fr; }
+  .about-sections-grid { grid-template-columns: 1fr; }
+}
+
 /* Primary button */
 .btn-primary {
   display: inline-flex;
