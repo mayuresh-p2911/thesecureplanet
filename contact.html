@@ -6,7 +6,7 @@
   <title>Contact Us — The Secure Planet</title>
   <link rel="icon" href="https://www.thesecureplanet.com/favicon.ico" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
-  <link rel="stylesheet" href="css/styles.css?v=44" />
+  <link rel="stylesheet" href="css/styles.css?v=45" />
 </head>
 <body>
 
@@ -62,152 +62,83 @@
     </div>
   </header>
 
-  <main class="main-content-area">
-    <div class="container layout-grid">
-      <article class="post-content">
-        <nav class="breadcrumb">
-          <a href="index.html">Home</a>
-          <span>/</span>
-          <span style="color:var(--text-main);">Contact</span>
-        </nav>
+  <main class="main-content-area about-page">
+    <div class="container about-container">
 
-        <header class="post-header-main">
-          <h1 class="post-main-title">Contact Our Security Team</h1>
-        </header>
-
-        <div class="post-body">
-          <p>
+      <!-- HERO -->
+      <section class="about-hero">
+        <div class="about-hero-text">
+          <div class="about-eyebrow">CONTACT</div>
+          <h1 class="about-hero-title">Contact<br /><span>Our Security Team</span></h1>
+          <p class="about-hero-intro">
             Whether you have a tip regarding a newly discovered vulnerability, want to inquire about corporate training programs, or need audit compliance consulting, our team is ready to assist.
           </p>
-
-          <div style="background:var(--bg-surface);border:1px solid var(--border-subtle);border-radius:var(--radius-md);padding:32px;margin:32px 0;">
-            <form onsubmit="event.preventDefault(); alert('Message dispatched securely to The Secure Planet team!');" style="display:flex;flex-direction:column;gap:18px;">
-              <div>
-                <label style="display:block;font-size:0.875rem;font-weight:600;margin-bottom:6px;">Your Legal / Professional Name</label>
-                <input type="text" placeholder="John Doe" required style="width:100%;background:var(--bg-root);border:1px solid var(--border-subtle);padding:12px 16px;border-radius:var(--radius-sm);color:var(--text-main);" />
-              </div>
-              <div>
-                <label style="display:block;font-size:0.875rem;font-weight:600;margin-bottom:6px;">Official Email Address</label>
-                <input type="email" placeholder="john@company.com" required style="width:100%;background:var(--bg-root);border:1px solid var(--border-subtle);padding:12px 16px;border-radius:var(--radius-sm);color:var(--text-main);" />
-              </div>
-              <div>
-                <label style="display:block;font-size:0.875rem;font-weight:600;margin-bottom:6px;">Subject / Area of Interest</label>
-                <input type="text" placeholder="Audit Compliance / Training / Tip" required style="width:100%;background:var(--bg-root);border:1px solid var(--border-subtle);padding:12px 16px;border-radius:var(--radius-sm);color:var(--text-main);" />
-              </div>
-              <div>
-                <label style="display:block;font-size:0.875rem;font-weight:600;margin-bottom:6px;">Message Body</label>
-                <textarea rows="5" placeholder="Detail your inquiry securely..." required style="width:100%;background:var(--bg-root);border:1px solid var(--border-subtle);padding:12px 16px;border-radius:var(--radius-sm);color:var(--text-main);"></textarea>
-              </div>
-              <button type="submit" class="btn-primary" style="align-self:flex-start;">
-                <i class="fa fa-paper-plane"></i> Send Secure Message
-              </button>
-            </form>
+        </div>
+        <div class="about-hero-visual" aria-hidden="true">
+          <div class="about-hero-rings"></div>
+          <div class="about-hero-plate">
+            <i class="fa fa-envelope"></i>
           </div>
         </div>
-      </article>
+      </section>
 
-      <aside class="sidebar">
-        <div class="sidebar-widget">
-          <h3 class="widget-title"><span><i class="fa fa-share-alt"></i> Connect With Us</span></h3>
-          <div class="social-grid">
-            <a href="https://www.twitter.com/TheSecurePlanet" target="_blank" class="social-tile social-twitter">
-              <i class="fa fa-twitter"></i> Twitter
-            </a>
-            <a href="https://goo.gl/t3DX3D" target="_blank" class="social-tile social-youtube">
-              <i class="fa fa-youtube-play"></i> YouTube
-            </a>
-            <a href="https://www.linkedin.com/in/prakashp" target="_blank" class="social-tile social-linkedin">
-              <i class="fa fa-linkedin"></i> LinkedIn
-            </a>
-            <a href="https://feeds.feedburner.com/TheSecurePlanet" target="_blank" class="social-tile social-rss">
-              <i class="fa fa-rss"></i> RSS Feed
-            </a>
-          </div>
+      <!-- FORM -->
+      <section class="about-card">
+        <div class="about-card-heading">
+          <span class="about-icon-circle"><i class="fa fa-paper-plane"></i></span>
+          <h2>Send a Secure Message</h2>
         </div>
+        <form onsubmit="event.preventDefault(); alert('Message dispatched securely to The Secure Planet team!');" style="display:flex;flex-direction:column;gap:18px;">
+          <div>
+            <label style="display:block;font-size:0.875rem;font-weight:600;margin-bottom:6px;color:var(--text-main);">Your Legal / Professional Name</label>
+            <input type="text" placeholder="John Doe" required style="width:100%;background:var(--bg-root);border:1px solid var(--border-subtle);padding:12px 16px;border-radius:var(--radius-sm);color:var(--text-main);" />
+          </div>
+          <div>
+            <label style="display:block;font-size:0.875rem;font-weight:600;margin-bottom:6px;color:var(--text-main);">Official Email Address</label>
+            <input type="email" placeholder="john@company.com" required style="width:100%;background:var(--bg-root);border:1px solid var(--border-subtle);padding:12px 16px;border-radius:var(--radius-sm);color:var(--text-main);" />
+          </div>
+          <div>
+            <label style="display:block;font-size:0.875rem;font-weight:600;margin-bottom:6px;color:var(--text-main);">Subject / Area of Interest</label>
+            <input type="text" placeholder="Audit Compliance / Training / Tip" required style="width:100%;background:var(--bg-root);border:1px solid var(--border-subtle);padding:12px 16px;border-radius:var(--radius-sm);color:var(--text-main);" />
+          </div>
+          <div>
+            <label style="display:block;font-size:0.875rem;font-weight:600;margin-bottom:6px;color:var(--text-main);">Message Body</label>
+            <textarea rows="5" placeholder="Detail your inquiry securely..." required style="width:100%;background:var(--bg-root);border:1px solid var(--border-subtle);padding:12px 16px;border-radius:var(--radius-sm);color:var(--text-main);"></textarea>
+          </div>
+          <button type="submit" class="btn-primary" style="align-self:flex-start;">
+            <i class="fa fa-paper-plane"></i> Send Secure Message
+          </button>
+        </form>
+      </section>
 
-        <div class="sidebar-widget">
-          <h3 class="widget-title"><span><i class="fa fa-shield"></i> Encrypted Communication</span></h3>
-          <p style="font-size:0.875rem;color:var(--text-secondary);">
-            All inquiries sent through this form are processed via TLS/SSL encrypted channels.
+      <!-- ENCRYPTED COMMS -->
+      <section class="about-card about-jobs">
+        <span class="about-icon-circle about-icon-circle--lg"><i class="fa fa-shield"></i></span>
+        <div>
+          <h3>Encrypted Communication</h3>
+          <p>
+            All inquiries sent through this form are processed via TLS/SSL encrypted channels. We respect your digital privacy and never share your details with third parties.
           </p>
         </div>
+      </section>
 
-        <!-- Popular Posts -->
-        <div class="sidebar-widget">
-          <h3 class="widget-title">
-            <span><i class="fa fa-fire"></i> Popular Articles</span>
-          </h3>
-          <div class="popular-list">
-
-            <a href="https://www.thesecureplanet.com/2017/12/microsoft-analyze-memory-corruption-bugs.html" class="popular-item">
-              <span class="popular-rank">01</span>
-              <div class="popular-info">
-                <h4 class="popular-title">Microsoft - Analyze Memory Corruption Bugs</h4>
-                <span class="popular-meta"><i class="fa fa-clock-o"></i> Dec 18, 2017</span>
-              </div>
-            </a>
-
-            <a href="https://www.thesecureplanet.com/2018/06/free-web-application-security-scanner.html" class="popular-item">
-              <span class="popular-rank">02</span>
-              <div class="popular-info">
-                <h4 class="popular-title">Free Web Application Security Scanner</h4>
-                <span class="popular-meta"><i class="fa fa-clock-o"></i> Jun 04, 2018</span>
-              </div>
-            </a>
-
-            <a href="https://www.thesecureplanet.com/2020/05/thesecureplanetcom-exclusive-online.html" class="popular-item">
-              <span class="popular-rank">03</span>
-              <div class="popular-info">
-                <h4 class="popular-title">Online Learning Goldmine - 100+ FREE Online courses</h4>
-                <span class="popular-meta"><i class="fa fa-clock-o"></i> May 15, 2020</span>
-              </div>
-            </a>
-
-            <a href="https://www.thesecureplanet.com/2020/05/free-iso-international-organization-for.html" class="popular-item">
-              <span class="popular-rank">04</span>
-              <div class="popular-info">
-                <h4 class="popular-title">FREE ISO (International Organization for Standardization) Standards</h4>
-                <span class="popular-meta"><i class="fa fa-clock-o"></i> May 10, 2020</span>
-              </div>
-            </a>
-
-            <a href="https://www.thesecureplanet.com/2020/04/free-online-courses-amazon-aws-iot.html" class="popular-item">
-              <span class="popular-rank">05</span>
-              <div class="popular-info">
-                <h4 class="popular-title">Free Online Courses - Amazon - AWS & IoT Security</h4>
-                <span class="popular-meta"><i class="fa fa-clock-o"></i> Apr 22, 2020</span>
-              </div>
-            </a>
-
-            <a href="https://www.thesecureplanet.com/2021/10/india-government-releases-guideline-for.html" class="popular-item">
-              <span class="popular-rank">06</span>
-              <div class="popular-info">
-                <h4 class="popular-title">India - Government releases guideline for the Cyber Security in Power Sector</h4>
-                <span class="popular-meta"><i class="fa fa-clock-o"></i> Oct 28, 2021</span>
-              </div>
-            </a>
-
+      <!-- CONNECT -->
+      <section class="about-signoff-band">
+        <div>
+          <div class="about-signoff-greeting">Prefer social?</div>
+          <div class="about-signoff-name" style="margin-bottom:6px;">Connect With Us</div>
+          <div style="display:flex;gap:12px;flex-wrap:wrap;">
+            <a href="https://www.twitter.com/TheSecurePlanet" target="_blank" class="about-signoff-email"><i class="fa fa-twitter"></i> Twitter</a>
+            <a href="https://goo.gl/t3DX3D" target="_blank" class="about-signoff-email"><i class="fa fa-youtube-play"></i> YouTube</a>
+            <a href="https://www.linkedin.com/in/prakashp" target="_blank" class="about-signoff-email"><i class="fa fa-linkedin"></i> LinkedIn</a>
+            <a href="https://feeds.feedburner.com/TheSecurePlanet" target="_blank" class="about-signoff-email"><i class="fa fa-rss"></i> RSS Feed</a>
           </div>
         </div>
-
-        <!-- Categories Cloud -->
-        <div class="sidebar-widget">
-          <h3 class="widget-title">
-            <span><i class="fa fa-tags"></i> Categories</span>
-          </h3>
-          <div class="categories-cloud">
-            <a href="https://www.thesecureplanet.com/search/label/Information%20Security" class="category-tag">Information Security</a>
-            <a href="https://www.thesecureplanet.com/search/label/Audit%20Compliance" class="category-tag">Audit Compliance</a>
-            <a href="https://www.thesecureplanet.com/search/label/Cyber%20Security" class="category-tag">Cyber Security</a>
-            <a href="https://www.thesecureplanet.com/search/label/Digital%20Forensics" class="category-tag">Digital Forensics</a>
-            <a href="https://www.thesecureplanet.com/search/label/Tech%20Tips" class="category-tag">Tech Tips</a>
-            <a href="https://www.thesecureplanet.com/search/label/Entrepreneurship" class="category-tag">Entrepreneurship</a>
-            <a href="https://www.thesecureplanet.com/search/label/Science" class="category-tag">Science</a>
-            <a href="https://www.thesecureplanet.com/search/label/General" class="category-tag">General</a>
-            <a href="https://www.thesecureplanet.com/search/label/Jobs" class="category-tag">Jobs</a>
-          </div>
+        <div class="about-signoff-right">
+          We typically respond<br />within 2–3 business days.
         </div>
-      </aside>
+      </section>
+
     </div>
   </main>
 
