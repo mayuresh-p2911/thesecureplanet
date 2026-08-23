@@ -445,7 +445,7 @@ button { cursor: pointer; }
 .megamenu-cat-link:hover { background: var(--bg-inset); color: var(--text-main); }
 
 .megamenu-cat-link.active {
-  background: var(--brand-blue, #2563EB);
+  background: var(--hp-green);
   color: #fff;
 }
 
@@ -473,7 +473,7 @@ button { cursor: pointer; }
 
 .megamenu-panel-header i {
   font-size: 1.25rem;
-  color: var(--brand-blue, #2563EB);
+  color: var(--hp-green);
 }
 
 .megamenu-panel-header h2 {
@@ -513,7 +513,7 @@ button { cursor: pointer; }
   gap: 6px;
   font-size: 0.8rem;
   font-weight: 500;
-  color: var(--brand-blue, #2563EB);
+  color: var(--hp-green);
 }
 
 .megamenu-viewall i { font-size: 0.7rem; }
@@ -555,7 +555,7 @@ button { cursor: pointer; }
   position: absolute;
   top: 8px;
   left: 8px;
-  background: var(--brand-blue, #2563EB);
+  background: var(--hp-green);
   color: #fff;
   font-size: 0.6rem;
   font-weight: 700;
@@ -586,7 +586,7 @@ button { cursor: pointer; }
   color: var(--text-muted);
 }
 
-.megamenu-post-badge--infosec     { background: #059669; }
+.megamenu-post-badge--infosec     { background: var(--hp-green); }
 .megamenu-post-badge--cybersec    { background: #0072bc; }
 .megamenu-post-badge--audit       { background: #c47800; }
 .megamenu-post-badge--forensics   { background: #7C3AED; }
@@ -615,7 +615,7 @@ button { cursor: pointer; }
 }
 
 .megamenu-feature i {
-  color: var(--brand-blue, #2563EB);
+  color: var(--hp-green);
   font-size: 0.95rem;
   margin-top: 2px;
 }
@@ -641,15 +641,15 @@ button { cursor: pointer; }
   align-items: center;
   gap: 8px;
   padding: 9px 16px;
-  background: color-mix(in srgb, var(--brand-blue, #2563EB) 10%, transparent);
-  color: var(--brand-blue, #2563EB);
+  background: color-mix(in srgb, var(--hp-green) 10%, transparent);
+  color: var(--hp-green);
   font-size: 0.8rem;
   font-weight: 600;
   border-radius: 9px;
   white-space: nowrap;
 }
 
-.megamenu-explore-btn:hover { background: color-mix(in srgb, var(--brand-blue, #2563EB) 18%, transparent); }
+.megamenu-explore-btn:hover { background: color-mix(in srgb, var(--hp-green) 18%, transparent); }
 
 /* Nav right actions */
 .nav-tools {
