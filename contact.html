@@ -6,7 +6,7 @@
   <title>Contact Us — The Secure Planet</title>
   <link rel="icon" href="https://www.thesecureplanet.com/favicon.ico" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
-  <link rel="stylesheet" href="css/styles.css?v=45" />
+  <link rel="stylesheet" href="css/styles.css?v=47" />
 </head>
 <body>
 
@@ -82,60 +82,90 @@
         </div>
       </section>
 
-      <!-- FORM -->
-      <section class="about-card">
-        <div class="about-card-heading">
-          <span class="about-icon-circle"><i class="fa fa-paper-plane"></i></span>
-          <h2>Send a Secure Message</h2>
-        </div>
-        <form onsubmit="event.preventDefault(); alert('Message dispatched securely to The Secure Planet team!');" style="display:flex;flex-direction:column;gap:18px;">
-          <div>
-            <label style="display:block;font-size:0.875rem;font-weight:600;margin-bottom:6px;color:var(--text-main);">Your Legal / Professional Name</label>
-            <input type="text" placeholder="John Doe" required style="width:100%;background:var(--bg-root);border:1px solid var(--border-subtle);padding:12px 16px;border-radius:var(--radius-sm);color:var(--text-main);" />
-          </div>
-          <div>
-            <label style="display:block;font-size:0.875rem;font-weight:600;margin-bottom:6px;color:var(--text-main);">Official Email Address</label>
-            <input type="email" placeholder="john@company.com" required style="width:100%;background:var(--bg-root);border:1px solid var(--border-subtle);padding:12px 16px;border-radius:var(--radius-sm);color:var(--text-main);" />
-          </div>
-          <div>
-            <label style="display:block;font-size:0.875rem;font-weight:600;margin-bottom:6px;color:var(--text-main);">Subject / Area of Interest</label>
-            <input type="text" placeholder="Audit Compliance / Training / Tip" required style="width:100%;background:var(--bg-root);border:1px solid var(--border-subtle);padding:12px 16px;border-radius:var(--radius-sm);color:var(--text-main);" />
-          </div>
-          <div>
-            <label style="display:block;font-size:0.875rem;font-weight:600;margin-bottom:6px;color:var(--text-main);">Message Body</label>
-            <textarea rows="5" placeholder="Detail your inquiry securely..." required style="width:100%;background:var(--bg-root);border:1px solid var(--border-subtle);padding:12px 16px;border-radius:var(--radius-sm);color:var(--text-main);"></textarea>
-          </div>
-          <button type="submit" class="btn-primary" style="align-self:flex-start;">
-            <i class="fa fa-paper-plane"></i> Send Secure Message
-          </button>
-        </form>
-      </section>
+      <!-- CONTACT CARD: form + info + map -->
+      <section class="about-card contact-card">
+        <div class="contact-grid">
 
-      <!-- ENCRYPTED COMMS -->
-      <section class="about-card about-jobs">
-        <span class="about-icon-circle about-icon-circle--lg"><i class="fa fa-shield"></i></span>
-        <div>
-          <h3>Encrypted Communication</h3>
-          <p>
-            All inquiries sent through this form are processed via TLS/SSL encrypted channels. We respect your digital privacy and never share your details with third parties.
-          </p>
-        </div>
-      </section>
-
-      <!-- CONNECT -->
-      <section class="about-signoff-band">
-        <div>
-          <div class="about-signoff-greeting">Prefer social?</div>
-          <div class="about-signoff-name" style="margin-bottom:6px;">Connect With Us</div>
-          <div style="display:flex;gap:12px;flex-wrap:wrap;">
-            <a href="https://www.twitter.com/TheSecurePlanet" target="_blank" class="about-signoff-email"><i class="fa fa-twitter"></i> Twitter</a>
-            <a href="https://goo.gl/t3DX3D" target="_blank" class="about-signoff-email"><i class="fa fa-youtube-play"></i> YouTube</a>
-            <a href="https://www.linkedin.com/in/prakashp" target="_blank" class="about-signoff-email"><i class="fa fa-linkedin"></i> LinkedIn</a>
-            <a href="https://feeds.feedburner.com/TheSecurePlanet" target="_blank" class="about-signoff-email"><i class="fa fa-rss"></i> RSS Feed</a>
+          <!-- FORM -->
+          <div class="contact-form-col">
+            <div class="about-card-heading">
+              <span class="about-icon-circle"><i class="fa fa-paper-plane"></i></span>
+              <h2>Send a Secure Message</h2>
+            </div>
+            <form id="contactForm" onsubmit="event.preventDefault(); alert('Message dispatched securely to The Secure Planet team!'); this.reset();" class="contact-form">
+              <div class="contact-field">
+                <label for="cf-name">Your Name</label>
+                <input id="cf-name" type="text" placeholder="Name" required />
+              </div>
+              <div class="contact-field">
+                <label for="cf-email">Your Email <span class="contact-required">*</span></label>
+                <input id="cf-email" type="email" placeholder="Email ID" required />
+              </div>
+              <div class="contact-field">
+                <label for="cf-subject">Subject</label>
+                <input id="cf-subject" type="text" placeholder="Subject" />
+              </div>
+              <div class="contact-field">
+                <label for="cf-message">Your Message <span class="contact-required">*</span></label>
+                <textarea id="cf-message" rows="5" placeholder="Write your message here..." required></textarea>
+              </div>
+              <div class="contact-form-actions">
+                <button type="reset" class="btn-secondary">Clear</button>
+                <button type="submit" class="btn-primary"><i class="fa fa-paper-plane"></i> Send</button>
+              </div>
+              <p class="contact-encrypted-note"><i class="fa fa-lock"></i> Sent via a TLS/SSL encrypted channel. We never share your details with third parties.</p>
+            </form>
           </div>
+
+          <!-- INFO -->
+          <div class="contact-info-col">
+            <h3 class="contact-info-title">Please use the form to contact</h3>
+            <p class="contact-info-sub">We will revert to you soon.</p>
+
+            <div class="contact-social">
+              <a href="https://www.twitter.com/TheSecurePlanet" target="_blank" class="share-btn" title="Twitter">
+                <i class="fa fa-twitter"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/prakashp" target="_blank" class="share-btn" title="LinkedIn">
+                <i class="fa fa-linkedin"></i>
+              </a>
+              <a href="https://www.reddit.com/user/TheSecurePlanet" target="_blank" class="share-btn" title="Reddit">
+                <i class="fa fa-reddit-alien"></i>
+              </a>
+              <a href="https://www.facebook.com/TheSecurePlanet" target="_blank" class="share-btn" title="Facebook">
+                <i class="fa fa-facebook"></i>
+              </a>
+            </div>
+
+            <h4 class="contact-info-heading">Contact Information</h4>
+            <ul class="contact-info-list">
+              <li>
+                <span class="about-icon-circle"><i class="fa fa-map-marker"></i></span>
+                <div>
+                  <div class="contact-info-label">Location</div>
+                  <div class="contact-info-value">Bangalore, India</div>
+                </div>
+              </li>
+              <li>
+                <span class="about-icon-circle"><i class="fa fa-envelope-o"></i></span>
+                <div>
+                  <div class="contact-info-label">Email Address</div>
+                  <a href="mailto:Prakash@thesecureplanet.com" class="contact-info-value contact-info-link">Prakash@thesecureplanet.com</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+
         </div>
-        <div class="about-signoff-right">
-          We typically respond<br />within 2–3 business days.
+
+        <!-- MAP -->
+        <div class="contact-map">
+          <iframe
+            src="https://maps.google.com/maps?q=Bengaluru%2C%20Karnataka%2C%20India&t=&z=10&ie=UTF8&iwloc=&output=embed"
+            title="The Secure Planet — Bangalore, India"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
         </div>
       </section>
 
