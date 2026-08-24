@@ -5,6 +5,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   initTickerLoop();
   initSearchModal();
+  initHeroSearch();
   initCategoryFilter();
   initCommentTabs();
   initRandomPost();
@@ -149,6 +150,68 @@ function initSearchModal() {
       }
     });
   }
+}
+
+/* ==========================================================================
+   HOMEPAGE HERO SEARCH — inline, no modal popup
+   ========================================================================== */
+function initHeroSearch() {
+  const input = document.getElementById('hero-search-input');
+  const resultsContainer = document.getElementById('hero-search-results');
+  if (!input || !resultsContainer) return;
+
+  const closeResults = () => resultsContainer.classList.remove('open');
+
+  input.addEventListener('input', (e) => {
+    const query = e.target.value.toLowerCase().trim();
+    const articles = document.querySelectorAll('.article-card, .hp-article-row');
+    resultsContainer.innerHTML = '';
+
+    if (query.length === 0) {
+      closeResults();
+      return;
+    }
+
+    let count = 0;
+    articles.forEach((article) => {
+      const title = article.querySelector('.article-title, .hp-article-title')?.textContent || '';
+      const excerpt = article.querySelector('.article-excerpt, .hp-article-excerpt')?.textContent || '';
+      const link = article.querySelector('.article-title a, .hp-article-title a')?.getAttribute('href') || '#';
+
+      if (title.toLowerCase().includes(query) || excerpt.toLowerCase().includes(query)) {
+        count++;
+        const item = document.createElement('a');
+        item.href = link;
+        item.className = 'hp-search-result-item';
+        item.innerHTML = `<div>${title}</div><small>Matched in content</small>`;
+        resultsContainer.appendChild(item);
+      }
+    });
+
+    if (count === 0) {
+      resultsContainer.innerHTML = `<div class="hp-search-empty">No articles found matching "${query}"</div>`;
+    }
+
+    resultsContainer.classList.add('open');
+  });
+
+  input.addEventListener('focus', () => {
+    if (input.value.trim().length > 0) resultsContainer.classList.add('open');
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+      e.preventDefault();
+      input.focus();
+    } else if (e.key === 'Escape' && document.activeElement === input) {
+      input.blur();
+      closeResults();
+    }
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.hp-search-bar-wrap')) closeResults();
+  });
 }
 
 /* ==========================================================================

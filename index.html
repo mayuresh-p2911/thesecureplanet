@@ -10,7 +10,7 @@
 
   <!-- FontAwesome 4.7 for exact icon compatibility -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
-  <link rel="stylesheet" href="css/styles.css?v=45" />
+  <link rel="stylesheet" href="css/styles.css?v=54" />
 </head>
 <body>
 
@@ -412,12 +412,12 @@
 
   <!-- HOMEPAGE SEARCH BAR -->
   <div class="hp-search-bar-section">
-    <div class="container">
-      <button class="hp-search-bar" id="search-trigger" aria-label="Search">
+    <div class="container hp-search-bar-wrap">
+      <label class="hp-search-bar hp-search-bar--input" for="hero-search-input">
         <i class="fa fa-search"></i>
-        <span>Search articles, guides, CVEs...</span>
-        <span class="search-shortcut">⌘K</span>
-      </button>
+        <input type="text" id="hero-search-input" class="hp-search-input" placeholder="Search articles, guides, CVEs..." autocomplete="off" />
+      </label>
+      <div id="hero-search-results" class="hp-search-dropdown"></div>
     </div>
   </div>
 
@@ -962,24 +962,6 @@
       </div>
     </div>
   </footer>
-
-  <!-- SEARCH MODAL OVERLAY -->
-  <div class="search-modal" id="search-modal">
-    <div class="search-modal-content">
-      <div class="search-input-wrapper">
-        <i class="fa fa-search"></i>
-        <input type="text" id="search-input" class="search-modal-input" placeholder="Search articles, guides, CVEs..." />
-        <button class="search-close-btn" id="search-close" aria-label="Close search">
-          <i class="fa fa-times"></i>
-        </button>
-      </div>
-      <div id="search-results-list" style="margin-top:16px;display:flex;flex-direction:column;gap:8px;">
-        <div style="color:var(--text-muted);font-size:0.875rem;padding:8px 0;">
-          Type anything to search live articles...
-        </div>
-      </div>
-    </div>
-  </div>
 
   <script src="js/main.js"></script>
 </body>
