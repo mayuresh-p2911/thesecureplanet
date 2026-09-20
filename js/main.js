@@ -301,16 +301,15 @@ function initRandomPost() {
    SHARE BUTTONS / TOAST NOTIFICATION
    ========================================================================== */
 function initShareButtons() {
-  const copyBtn = document.getElementById('copy-link-btn');
-  if (!copyBtn) return;
-
-  copyBtn.addEventListener('click', () => {
-    navigator.clipboard.writeText(window.location.href).then(() => {
-      const originalIcon = copyBtn.innerHTML;
-      copyBtn.innerHTML = `<i class="fa fa-check" style="color:#10B981;"></i>`;
-      setTimeout(() => {
-        copyBtn.innerHTML = originalIcon;
-      }, 2000);
+  document.querySelectorAll('.copy-link-btn').forEach((copyBtn) => {
+    copyBtn.addEventListener('click', () => {
+      navigator.clipboard.writeText(window.location.href).then(() => {
+        const originalIcon = copyBtn.innerHTML;
+        copyBtn.innerHTML = `<i class="fa fa-check" style="color:#10B981;"></i>`;
+        setTimeout(() => {
+          copyBtn.innerHTML = originalIcon;
+        }, 2000);
+      });
     });
   });
 }
