@@ -227,7 +227,7 @@ button { cursor: pointer; }
 
 .site-logo-img--footer,
 .site-footer .site-logo-img--footer {
-  height: 80px;
+  height: 60px;
   width: auto;
   max-width: 100%;
 }
@@ -2512,7 +2512,7 @@ input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
   --bg-inset: #18181B;
   background: var(--bg-ink);
   border-top: 1px solid #27272A;
-  padding: 76px 0 36px;
+  padding: 44px 0 22px;
   margin-top: auto;
   color: var(--text-secondary);
 }
@@ -2537,8 +2537,8 @@ input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
 .footer-brand p {
   color: var(--text-secondary);
   font-size: 0.95rem;
-  line-height: 1.7;
-  margin: 18px 0;
+  line-height: 1.6;
+  margin: 12px 0;
   max-width: 340px;
 }
 
@@ -2548,14 +2548,14 @@ input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  margin-bottom: 18px;
+  margin-bottom: 12px;
   color: var(--text-muted);
 }
 
 .footer-links {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 8px;
   font-size: 0.95rem;
   color: var(--text-secondary);
 }
@@ -2587,7 +2587,7 @@ input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
 
 .footer-bottom {
   border-top: 1px solid var(--border-subtle);
-  padding-top: 26px;
+  padding-top: 18px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -2884,7 +2884,7 @@ input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
   .post-body { font-size: 1rem; }
 
   /* Footer */
-  .site-footer { padding: 40px 0 24px; }
+  .site-footer { padding: 32px 0 20px; }
   .footer-grid { grid-template-columns: minmax(0, 1fr); gap: 28px; }
   .footer-bottom { flex-direction: column; text-align: center; }
 
@@ -3228,7 +3228,7 @@ input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
    ========================================================================== */
 @media (max-width: 480px) {
   .site-logo-img { height: 38px; }
-  .site-footer .site-logo-img--footer { height: 68px; }
+  .site-footer .site-logo-img--footer { height: 52px; }
   .hero-title { font-size: 1.32rem; }
   .meta-row { flex-wrap: wrap; gap: 8px; }
   .side-feature-card { flex-direction: column; align-items: stretch; }
@@ -4105,32 +4105,10 @@ input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
 /* ---- Footer v2 ---- */
 .hp-footer-grid {
   display: grid;
-  grid-template-columns: 1.7fr 1fr 1fr 1fr 1.3fr;
-  gap: 40px;
-  margin-bottom: 48px;
-}
-
-.hp-disclaimer-box {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-md);
-  padding: 20px;
-}
-
-.hp-disclaimer-box h4 {
-  font-family: var(--font-mono);
-  font-size: 0.8rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  margin-bottom: 12px;
-  color: var(--text-muted);
-}
-
-.hp-disclaimer-box p {
-  font-size: 0.875rem;
-  line-height: 1.65;
-  color: var(--text-secondary);
+  grid-template-columns: minmax(0, 340px) repeat(3, auto);
+  justify-content: space-between;
+  gap: 32px;
+  margin-bottom: 28px;
 }
 
 /* ---- Responsive ---- */
