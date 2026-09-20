@@ -225,8 +225,11 @@ button { cursor: pointer; }
   display: block;
 }
 
-.site-logo-img--footer {
-  height: 50px;
+.site-logo-img--footer,
+.site-footer .site-logo-img--footer {
+  height: 80px;
+  width: auto;
+  max-width: 100%;
 }
 
 .site-logo-img--dark {
@@ -2172,7 +2175,7 @@ button { cursor: pointer; }
 .about-section-card:nth-child(4) {
   justify-content: center;
   background: var(--hp-green-soft);
-  border-color: rgba(22, 163, 74, 0.25);
+  border-color: rgba(37, 99, 235, 0.25);
 }
 
 .about-section-card:nth-child(4) .about-icon-circle {
@@ -3225,6 +3228,7 @@ input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
    ========================================================================== */
 @media (max-width: 480px) {
   .site-logo-img { height: 38px; }
+  .site-footer .site-logo-img--footer { height: 68px; }
   .hero-title { font-size: 1.32rem; }
   .meta-row { flex-wrap: wrap; gap: 8px; }
   .side-feature-card { flex-direction: column; align-items: stretch; }
@@ -3321,10 +3325,10 @@ input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
    stack) are completely unaffected by anything below.
    ========================================================================== */
 :root {
-  --hp-green: #16A34A;
-  --hp-green-hover: #15803D;
-  --hp-green-soft: rgba(22, 163, 74, 0.1);
-  --hp-green-glow: rgba(22, 163, 74, 0.18);
+  --hp-green: #2563EB;
+  --hp-green-hover: #1D4ED8;
+  --hp-green-soft: rgba(37, 99, 235, 0.1);
+  --hp-green-glow: rgba(37, 99, 235, 0.18);
 }
 
 /* Dark mode — toggled via [data-theme="dark"] on <html>. Because the whole
@@ -3436,7 +3440,7 @@ input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
 .hp-ticker-badge {
   color: var(--hp-green);
   background: var(--hp-green-soft);
-  border-color: rgba(22, 163, 74, 0.28);
+  border-color: rgba(37, 99, 235, 0.28);
 }
 
 /* ---- Hero split: featured card + latest-news panel ---- */
@@ -3486,7 +3490,7 @@ input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
   inset: 0;
   z-index: 1;
   background:
-    radial-gradient(circle at 68% 42%, rgba(22, 163, 74, 0.16), transparent 55%),
+    radial-gradient(circle at 68% 42%, rgba(37, 99, 235, 0.16), transparent 55%),
     radial-gradient(rgba(148, 163, 184, 0.16) 1.5px, transparent 1.5px);
   background-size: auto, 16px 16px;
 }
@@ -4044,7 +4048,7 @@ input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
   flex-shrink: 0;
   border-radius: var(--radius-md);
   background: var(--hp-green-soft);
-  border: 1px solid rgba(22, 163, 74, 0.3);
+  border: 1px solid rgba(37, 99, 235, 0.3);
   color: var(--hp-green);
   display: flex;
   align-items: center;
@@ -4091,7 +4095,7 @@ input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
   top: -20px;
   width: 220px;
   height: 220px;
-  background-image: radial-gradient(rgba(22, 163, 74, 0.25) 1.5px, transparent 1.5px);
+  background-image: radial-gradient(rgba(37, 99, 235, 0.25) 1.5px, transparent 1.5px);
   background-size: 18px 18px;
   -webkit-mask-image: radial-gradient(circle, #000 0%, transparent 72%);
   mask-image: radial-gradient(circle, #000 0%, transparent 72%);
